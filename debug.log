@@ -1,0 +1,1433 @@
+2023-10-18T23:26:14.161808+0300 || DEBUG || ---LOGED---
+2023-10-18T23:35:57.767128+0300 || DEBUG || ---LOGED---
+2023-10-18T23:36:02.269101+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> return_admin
+2023-10-18T23:36:19.435500+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (success)
+2023-10-18T23:42:17.691386+0300 || DEBUG || ---LOGED---
+2023-10-18T23:44:40.979008+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (fail)
+2023-10-18T23:44:59.997236+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (fail)
+2023-10-18T23:45:09.872819+0300 || DEBUG || ---LOGED---
+2023-10-18T23:45:15.259962+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (fail)
+2023-10-18T23:45:28.348400+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (success)
+2023-10-18T23:45:33.149482+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (fail)
+2023-10-18T23:45:38.056003+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (success)
+2023-10-18T23:49:36.180342+0300 || DEBUG || ---LOGED---
+2023-10-18T23:50:57.323755+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (success)
+2023-10-18T23:54:01.106517+0300 || DEBUG || ---LOGED---
+2023-10-18T23:56:43.534860+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (11384), thread 'MainThread' (10724):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 35, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x0000026DD95B1440>
+    └ <discord.client.Client object at 0x0000026DD889A750>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x0000026DD9681B20>
+    │       └ <function run at 0x0000026DD7E76FC0>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x0000026DD965DC60>
+           │      └ <function Runner.run at 0x0000026DD7EC4A40>
+           └ <asyncio.runners.Runner object at 0x0000026DD967F910>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x0000026DD7EC2520>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x0000026DD967F910>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x0000026DD7FDE5C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000026DD7EC42C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000026DD7E70360>
+    └ <Handle <TaskStepMethWrapper object at 0x0000026DD968A650>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x0000026DD968A650>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x0000026DD968A650>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x0000026DD968A650>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164306096794632294 channel=<TextChannel id=866252762853670924 name='общее' position=1 nsfw=False news=False cat...
+          └ <function on_message at 0x0000026DD9681A80>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 31, in on_message
+    case '/регистрация' | '/registration': await send(registration(author_name, author_id, conditions))
+                                                 │    │            │            │          └ 'Весяa'
+                                                 │    │            │            └ 710395621688737892
+                                                 │    │            └ 'elisey_iz_kkr'
+                                                 │    └ <function registration at 0x0000026DD9681620>
+                                                 └ <function on_message.<locals>.send at 0x0000026DD9682200>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 23, in registration
+    MEMBERS = json.load(f)
+              │    │    └ <_io.TextIOWrapper name='members.json' mode='r' encoding='utf-8'>
+              │    └ <function load at 0x0000026DD7FFD8A0>
+              └ <module 'json' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\__init__.py'>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           │     │  └ <method 'read' of '_io.TextIOWrapper' objects>
+           │     └ <_io.TextIOWrapper name='members.json' mode='r' encoding='utf-8'>
+           └ <function loads at 0x0000026DD7FFD800>
+  File "<frozen codecs>", line 322, in decode
+
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe5 in position 7: invalid continuation byte
+2023-10-18T23:57:15.131450+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (11384), thread 'MainThread' (10724):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 35, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x0000026DD95B1440>
+    └ <discord.client.Client object at 0x0000026DD889A750>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x0000026DD9681B20>
+    │       └ <function run at 0x0000026DD7E76FC0>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x0000026DD965DC60>
+           │      └ <function Runner.run at 0x0000026DD7EC4A40>
+           └ <asyncio.runners.Runner object at 0x0000026DD967F910>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x0000026DD7EC2520>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x0000026DD967F910>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x0000026DD7FDE5C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000026DD7EC42C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000026DD7E70360>
+    └ <Handle <TaskStepMethWrapper object at 0x0000026DD968AB90>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x0000026DD968AB90>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x0000026DD968AB90>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x0000026DD968AB90>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164306229338853477 channel=<TextChannel id=866252762853670924 name='общее' position=1 nsfw=False news=False cat...
+          └ <function on_message at 0x0000026DD9681A80>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 31, in on_message
+    case '/регистрация' | '/registration': await send(registration(author_name, author_id, conditions))
+                                                 │    │            │            │          └ 'Весяaer'
+                                                 │    │            │            └ 710395621688737892
+                                                 │    │            └ 'elisey_iz_kkr'
+                                                 │    └ <function registration at 0x0000026DD9681620>
+                                                 └ <function on_message.<locals>.send at 0x0000026DD9682200>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 23, in registration
+    MEMBERS = json.load(f)
+              │    │    └ <_io.TextIOWrapper name='members.json' mode='r' encoding='utf-8'>
+              │    └ <function load at 0x0000026DD7FFD8A0>
+              └ <module 'json' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\__init__.py'>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           │     │  └ <method 'read' of '_io.TextIOWrapper' objects>
+           │     └ <_io.TextIOWrapper name='members.json' mode='r' encoding='utf-8'>
+           └ <function loads at 0x0000026DD7FFD800>
+  File "<frozen codecs>", line 322, in decode
+
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe5 in position 7: invalid continuation byte
+2023-10-19T00:07:52.749439+0300 || DEBUG || ---LOGED---
+2023-10-19T00:08:09.409948+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (success)
+2023-10-19T00:08:24.708752+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (success)
+2023-10-19T00:08:32.897825+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (success)
+2023-10-19T00:48:30.527541+0300 || DEBUG || ---LOGED---
+2023-10-19T00:48:53.649074+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (success)
+2023-10-19T00:49:01.476569+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (success)
+2023-10-19T00:50:01.054829+0300 || DEBUG || ---LOGED---
+2023-10-19T00:50:07.275193+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (success)
+2023-10-19T00:55:59.726475+0300 || DEBUG || ---LOGED---
+2023-10-19T00:56:07.522734+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (5292), thread 'MainThread' (13024):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 35, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x000001CD54D01440>
+    └ <discord.client.Client object at 0x000001CD515C8FD0>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001CD54DD1A80>
+    │       └ <function run at 0x000001CD535C6FC0>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001CD54DADC60>
+           │      └ <function Runner.run at 0x000001CD53614A40>
+           └ <asyncio.runners.Runner object at 0x000001CD54DDEF10>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001CD53612520>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001CD54DDEF10>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001CD53B2E5C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001CD536142C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001CD535C0360>
+    └ <Handle <TaskStepMethWrapper object at 0x000001CD54DDB160>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001CD54DDB160>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001CD54DDB160>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001CD54DDB160>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164321045407334422 channel=<TextChannel id=866252762853670924 name='общее' position=1 nsfw=False news=False cat...
+          └ <function on_message at 0x000001CD54DD19E0>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 31, in on_message
+    case '/регистрация' | '/registration': await send(registration(author_name, author_id, conditions))
+                                                 │    │            │            │          └ 'елисей'
+                                                 │    │            │            └ 710395621688737892
+                                                 │    │            └ 'elisey_iz_kkr'
+                                                 │    └ <function registration at 0x000001CD54DD1580>
+                                                 └ <function on_message.<locals>.send at 0x000001CD551663E0>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 28, in registration
+    MEMBERS = json.load(f)
+              │    │    └ <_io.TextIOWrapper name='members.json' mode='r' encoding='utf-8'>
+              │    └ <function load at 0x000001CD53B4D8A0>
+              └ <module 'json' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\__init__.py'>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           │     │  └ <method 'read' of '_io.TextIOWrapper' objects>
+           │     └ <_io.TextIOWrapper name='members.json' mode='r' encoding='utf-8'>
+           └ <function loads at 0x000001CD53B4D800>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           │                │      └ ''
+           │                └ <function JSONDecoder.decode at 0x000001CD53B4DB20>
+           └ <json.decoder.JSONDecoder object at 0x000001CD53B79310>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               │    │          │      │  └ ''
+               │    │          │      └ <built-in method match of re.Pattern object at 0x000001CD53B742B0>
+               │    │          └ ''
+               │    └ <function JSONDecoder.raw_decode at 0x000001CD53B4DA80>
+               └ <json.decoder.JSONDecoder object at 0x000001CD53B79310>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+          │                                  └ ''
+          └ <class 'json.decoder.JSONDecodeError'>
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-10-19T00:57:11.110612+0300 || DEBUG || ---LOGED---
+2023-10-19T00:57:12.826941+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (success)
+2023-10-19T00:57:20.165061+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (fail)
+2023-10-19T00:57:23.802494+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (fail)
+2023-10-19T00:57:26.650563+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (fail)
+2023-10-19T00:57:31.315584+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> registration (fail)
+2023-10-19T18:06:27.226960+0300 || DEBUG || ---LOGED---
+2023-10-19T18:06:44.602400+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:06:56.686055+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-19T18:27:13.133713+0300 || DEBUG || ---LOGED---
+2023-10-19T18:27:16.988691+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-19T18:44:18.711070+0300 || DEBUG || ---LOGED---
+2023-10-19T18:44:28.386574+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-19T18:44:36.845530+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:46:13.895463+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:46:21.823401+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:47:05.209436+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:47:33.323019+0300 || DEBUG || ---LOGED---
+2023-10-19T18:47:37.106830+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:47:47.967337+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:48:43.837777+0300 || DEBUG || ---LOGED---
+2023-10-19T18:48:46.065395+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:50:41.499283+0300 || DEBUG || ---LOGED---
+2023-10-19T18:50:45.114135+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:51:04.250620+0300 || DEBUG || ---LOGED---
+2023-10-19T18:51:05.303286+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:53:12.619135+0300 || DEBUG || ---LOGED---
+2023-10-19T18:53:14.504078+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:54:40.503124+0300 || DEBUG || ---LOGED---
+2023-10-19T18:54:41.626464+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:55:48.556061+0300 || DEBUG || ---LOGED---
+2023-10-19T18:55:48.681375+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:56:35.369945+0300 || DEBUG || ---LOGED---
+2023-10-19T18:56:36.483893+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:57:49.961325+0300 || DEBUG || ---LOGED---
+2023-10-19T18:57:51.932224+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:59:25.605786+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (success)
+2023-10-19T18:59:25.638729+0300 || DEBUG || ---LOGED---
+2023-10-19T18:59:40.787113+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:59:47.531627+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T18:59:56.453574+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-19T19:02:53.488507+0300 || DEBUG || ---LOGED---
+2023-10-19T19:03:41.933352+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (19088), thread 'MainThread' (11180):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 36, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x000001783FD91440>
+    └ <discord.client.Client object at 0x000001783FD9FB10>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001783FE76480>
+    │       └ <function run at 0x000001783E65AFC0>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001783FE3DC60>
+           │      └ <function Runner.run at 0x000001783E6A4A40>
+           └ <asyncio.runners.Runner object at 0x000001783F082850>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001783E6A2520>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001783F082850>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001783E7BE5C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001783E6A42C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001783E650360>
+    └ <Handle <TaskStepMethWrapper object at 0x000001783FE6AF20>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001783FE6AF20>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001783FE6AF20>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001783FE6AF20>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164594735344795688 channel=<TextChannel id=866252762853670924 name='общее' position=1 nsfw=False news=False cat...
+          └ <function on_message at 0x000001783FE763E0>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 33, in on_message
+    case '/изменить'    | '/change'      : await send(change(author_name, author_id, conditions))
+                                                 │    │      │            │          └ ['елисей', 'елисейгодх', 'кондратийь', 'warlock']
+                                                 │    │      │            └ 710395621688737892
+                                                 │    │      └ 'elisey_iz_kkr'
+                                                 │    └ <function change at 0x000001783FE75F80>
+                                                 └ <function on_message.<locals>.send at 0x00000178401FA980>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 111, in change
+    banloot = MEMBERS[old_screen_name][banloot]
+              │       └ 'елисей'
+              └ {'Empty': {'id': 123, 'name': 'zalupa', 'class': 'dk', 'char': 'zalupa', 'banloot': 0}, 'елисей': {'id': 710395621688737892, ...
+
+UnboundLocalError: cannot access local variable 'banloot' where it is not associated with a value
+2023-10-19T19:04:41.636339+0300 || DEBUG || ---LOGED---
+2023-10-19T19:04:49.744311+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /change (success)
+2023-10-19T19:05:01.064347+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /change (fail)
+2023-10-19T19:05:23.081789+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /change (success)
+2023-10-19T19:05:42.625533+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /change (success)
+2023-10-19T23:17:54.191911+0300 || DEBUG || ---LOGED---
+2023-10-19T23:18:19.324078+0300 || DEBUG || ---LOGED---
+2023-10-19T23:35:17.408863+0300 || DEBUG || ---LOGED---
+2023-10-19T23:37:21.750310+0300 || DEBUG || ---LOGED---
+2023-10-19T23:42:30.426534+0300 || DEBUG || ---LOGED---
+2023-10-20T00:02:54.583110+0300 || DEBUG || ---LOGED---
+2023-10-20T00:06:18.950601+0300 || DEBUG || ---LOGED---
+2023-10-20T00:06:20.629978+0300 || DEBUG || ---LOGED---
+2023-10-20T00:06:41.296614+0300 || DEBUG || ---LOGED---
+2023-10-20T00:06:54.586596+0300 || DEBUG || ---LOGED---
+2023-10-20T00:07:45.327263+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:07:45.327263+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:07:45.329263+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:07:45.330263+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:07:45.332264+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:07:45.334768+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:07:45.337794+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:07:45.338794+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:07:45.350300+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:07:45.354804+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:10:14.839448+0300 || DEBUG || ---LOGED---
+2023-10-20T00:10:16.865902+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:10:16.873904+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:10:16.875905+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:10:16.876905+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:10:16.877905+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:10:16.878906+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:10:16.884907+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:10:16.878906+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (17180), thread 'MainThread' (16108):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 37, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x00000220162E1300>
+    └ <discord.client.Client object at 0x0000022012C28E10>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x00000220163AB880>
+    │       └ <function run at 0x0000022014BA3060>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000002201638CB80>
+           │      └ <function Runner.run at 0x0000022014BF8AE0>
+           └ <asyncio.runners.Runner object at 0x00000220163B4CD0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x0000022014BF65C0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x00000220163B4CD0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x0000022014CDE480>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000022014BF8360>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000022014B98400>
+    └ <Handle <TaskStepMethWrapper object at 0x00000220163B2F20>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x00000220163B2F20>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x00000220163B2F20>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x00000220163B2F20>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164671891479474226 channel=<TextChannel id=866252762853670924 name='общее' position=1 nsfw=False news=False cat...
+          └ <function on_message at 0x00000220163AB7E0>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 32, in on_message
+    case '/участники'   | '/members'     : await send(return_members(author_name, author_id))
+                                                 │    │              │            └ 710395621688737892
+                                                 │    │              └ 'elisey_iz_kkr'
+                                                 │    └ <function return_members at 0x00000220163AAC00>
+                                                 └ <function on_message.<locals>.send at 0x00000220163ABBA0>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 82, in return_members
+    MEMBERS = open_json('members')
+              └ <function open_json at 0x00000220162E77E0>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 20, in open_json
+    DICT = json.load(f)                                    # open
+           │    │    └ <_io.TextIOWrapper name='members.json' mode='r' encoding='utf-8'>
+           │    └ <function load at 0x0000022014D53880>
+           └ <module 'json' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\__init__.py'>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           │     │  └ <method 'read' of '_io.TextIOWrapper' objects>
+           │     └ <_io.TextIOWrapper name='members.json' mode='r' encoding='utf-8'>
+           └ <function loads at 0x0000022014D53920>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           │                │      └ ''
+           │                └ <function JSONDecoder.decode at 0x0000022014D53100>
+           └ <json.decoder.JSONDecoder object at 0x0000022014B6B350>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               │    │          │      │  └ ''
+               │    │          │      └ <built-in method match of re.Pattern object at 0x0000022014D65220>
+               │    │          └ ''
+               │    └ <function JSONDecoder.raw_decode at 0x0000022014D531A0>
+               └ <json.decoder.JSONDecoder object at 0x0000022014B6B350>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+          │                                  └ ''
+          └ <class 'json.decoder.JSONDecodeError'>
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-10-20T00:10:16.889908+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:10:16.891909+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:12:37.768116+0300 || DEBUG || ---LOGED---
+2023-10-20T00:12:42.652211+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:12:42.654212+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:12:42.658213+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:12:42.659213+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:12:42.661213+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:12:42.662214+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:12:42.664214+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:12:42.663214+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:12:42.675217+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:12:42.688219+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:00.924086+0300 || DEBUG || ---LOGED---
+2023-10-20T00:13:03.144584+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:03.147585+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:03.149585+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:03.151586+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:03.154586+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:03.154586+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:03.158587+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:03.159588+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:03.175591+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:03.182593+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:41.316557+0300 || DEBUG || ---LOGED---
+2023-10-20T00:13:43.203981+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:43.205981+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:43.210982+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:43.210982+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:43.211982+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:43.216984+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:43.217984+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:43.218984+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:43.221984+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:13:43.234987+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:15:33.936538+0300 || DEBUG || ---LOGED---
+2023-10-20T00:20:09.507600+0300 || DEBUG || ---LOGED---
+2023-10-20T00:20:18.153539+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (18288), thread 'MainThread' (13712):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 37, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x000001DB36C21300>
+    └ <discord.client.Client object at 0x000001DB3351D350>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001DB36CFE840>
+    │       └ <function run at 0x000001DB354E3060>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001DB36CCDB70>
+           │      └ <function Runner.run at 0x000001DB35538AE0>
+           └ <asyncio.runners.Runner object at 0x000001DB35F172D0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001DB355365C0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001DB35F172D0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001DB3561E480>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001DB35538360>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001DB354DC400>
+    └ <Handle <TaskStepMethWrapper object at 0x000001DB36CF7F10>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001DB36CF7F10>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001DB36CF7F10>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001DB36CF7F10>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164674413514477610 channel=<TextChannel id=866252762853670924 name='общее' position=1 nsfw=False news=False cat...
+          └ <function on_message at 0x000001DB36CFE7A0>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 34, in on_message
+    case '/пиксель'     | '/object'      : await send(return_object(author_name, author_id, conditions))
+                                                 │    │             │            │          └ ['Воля', 'Смертоносного']
+                                                 │    │             │            └ 710395621688737892
+                                                 │    │             └ 'elisey_iz_kkr'
+                                                 │    └ <function return_object at 0x000001DB36CFE340>
+                                                 └ <function on_message.<locals>.send at 0x000001DB36D171A0>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 139, in return_object
+    Очередь: {np.join(f'{classes[MEMBERS[looter]["class"]]} {MEMBERS[looter]["char"]}' for looter in LOOT[conditions]["queue"])}
+              │  │                                                                                   │    └ 'Воля Смертоносного'
+              │  │                                                                                   └ {'Воля Смертоносного': {'slot': 'trinket', 'ilvl': 277, 'description': 'Если на персонаже: Снижает эффективность брони против...
+              │  └ <method 'join' of 'str' objects>
+              └ '\n'
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 139, in <genexpr>
+    Очередь: {np.join(f'{classes[MEMBERS[looter]["class"]]} {MEMBERS[looter]["char"]}' for looter in LOOT[conditions]["queue"])}
+                                                                                           └ 'Zalupa'
+
+KeyError: 'Zalupa'
+2023-10-20T00:21:13.042500+0300 || DEBUG || ---LOGED---
+2023-10-20T00:28:55.207422+0300 || DEBUG || ---LOGED---
+2023-10-20T00:28:59.871468+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:28:59.872469+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:28:59.875469+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:28:59.876469+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:28:59.876469+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:28:59.878469+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:28:59.880470+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:28:59.881470+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:28:59.882471+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:28:59.892473+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T00:29:10.307554+0300 || DEBUG || ---LOGED---
+2023-10-20T00:29:14.356462+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T00:57:43.510846+0300 || DEBUG || ---LOGED---
+2023-10-20T00:57:46.484514+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T00:57:46.485514+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (fail)
+2023-10-20T00:58:24.627759+0300 || DEBUG || ---LOGED---
+2023-10-20T00:58:25.648988+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T00:58:25.648988+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (15240), thread 'MainThread' (2544):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 37, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x00000169AD201300>
+    └ <discord.client.Client object at 0x00000169AC56AE50>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x00000169AD2DE7A0>
+    │       └ <function run at 0x00000169ABAC3060>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x00000169AD2ADB70>
+           │      └ <function Runner.run at 0x00000169ABB18AE0>
+           └ <asyncio.runners.Runner object at 0x00000169AC4F5AD0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x00000169ABB165C0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x00000169AC4F5AD0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x00000169ABBFE480>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x00000169ABB18360>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x00000169ABABC400>
+    └ <Handle <TaskStepMethWrapper object at 0x00000169AD2D7E20>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x00000169AD2D7E20>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x00000169AD2D7E20>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x00000169AD2D7E20>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164684008194584677 channel=<TextChannel id=866252762853670924 name='общее' position=1 nsfw=False news=False cat...
+          └ <function on_message at 0x00000169AD2DE700>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 34, in on_message
+    case '/пиксель'     | '/object'      : await send(return_object(author_name, author_id, conditions))
+                                                 │    │             │            │          └ ['Воля', 'Смертоносного']
+                                                 │    │             │            └ 710395621688737892
+                                                 │    │             └ 'elisey_iz_kkr'
+                                                 │    └ <function return_object at 0x00000169AD2DE2A0>
+                                                 └ <function on_message.<locals>.send at 0x00000169AD2F7100>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 146, in return_object
+    return (loot, '{files: ["' + {LOOT[conditions]["img"]} + '"]}')
+            │                     │    └ 'Воля Смертоносного'
+            │                     └ {'Воля Смертоносного': {'slot': 'trinket', 'ilvl': 277, 'caste': 'melee', 'description': 'Если на персонаже: Снижает эффектив...
+            └ 'Воля Смертоносного\nслот: trinket\nilvl: 277\nкаста: melee\nЕсли на персонаже: Снижает эффективность брони противника против...
+
+TypeError: can only concatenate str (not "set") to str
+2023-10-20T01:00:01.427624+0300 || DEBUG || ---LOGED---
+2023-10-20T01:00:04.864395+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T01:00:46.394398+0300 || DEBUG || ---LOGED---
+2023-10-20T01:00:54.343181+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T01:06:57.359875+0300 || DEBUG || ---LOGED---
+2023-10-20T01:07:01.861884+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T01:07:22.711070+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:07:22.713070+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:07:22.716070+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:07:22.720072+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:07:22.721072+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:07:22.722072+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:07:22.722072+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:07:22.722072+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:07:22.723072+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:07:22.734075+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:11:23.125461+0300 || DEBUG || ---LOGED---
+2023-10-20T01:11:27.644473+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:11:27.646474+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:11:27.649474+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:11:27.652475+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:11:27.653475+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:11:27.653475+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:11:27.657476+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:11:27.660477+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:11:27.667479+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:11:27.678481+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:17:16.048659+0300 || DEBUG || ---LOGED---
+2023-10-20T01:17:17.989094+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:17:17.989094+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:17:17.994095+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:17:17.995096+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:17:17.998096+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:17:18.002097+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:17:18.002097+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:17:18.008099+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:17:18.009099+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:17:18.011099+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:18:39.525632+0300 || DEBUG || ---LOGED---
+2023-10-20T01:18:41.608099+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:18:41.608099+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:18:41.610099+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:18:41.615101+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:18:41.616101+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:18:41.616101+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:18:41.618102+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:18:41.621102+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:18:41.623103+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:18:41.626103+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:21:11.722010+0300 || DEBUG || ---LOGED---
+2023-10-20T01:21:12.351151+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:21:12.353151+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:21:12.354152+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:21:12.356152+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:21:12.357153+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:21:12.361153+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:21:12.362154+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:21:12.363154+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:21:12.370155+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T01:21:12.393160+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T13:10:13.208777+0300 || DEBUG || ---LOGED---
+2023-10-20T13:10:18.905985+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (fail)
+2023-10-20T13:12:02.183845+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-20T13:12:14.903074+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T13:30:57.883553+0300 || DEBUG || ---LOGED---
+2023-10-20T13:31:18.594249+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (fail)
+2023-10-20T13:31:53.738861+0300 || DEBUG || ---LOGED---
+2023-10-20T13:31:55.244899+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (19200), thread 'MainThread' (14620):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 37, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x000001D4E5681300>
+    └ <discord.client.Client object at 0x000001D4E1FDD450>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001D4E575E840>
+    │       └ <function run at 0x000001D4E3F43060>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001D4E572DB70>
+           │      └ <function Runner.run at 0x000001D4E3F98AE0>
+           └ <asyncio.runners.Runner object at 0x000001D4E576C2D0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001D4E3F965C0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001D4E576C2D0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001D4E44B2480>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001D4E3F98360>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001D4E3F3C400>
+    └ <Handle <TaskStepMethWrapper object at 0x000001D4E5757FA0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001D4E5757FA0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001D4E5757FA0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001D4E5757FA0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164873628131790868 channel=<TextChannel id=866252762853670924 name='общее' position=1 nsfw=False news=False cat...
+          └ <function on_message at 0x000001D4E575E7A0>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 34, in on_message
+    case '/пиксель'     | '/object'      : await send(return_object(author_name, author_id, conditions))
+                                                 │    │             │            │          └ ['Воля', 'Смертоносного']
+                                                 │    │             │            └ 710395621688737892
+                                                 │    │             └ 'elisey_iz_kkr'
+                                                 │    └ <function return_object at 0x000001D4E575E340>
+                                                 └ <function on_message.<locals>.send at 0x000001D4E577B1A0>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 151, in return_object
+    Полутавшие: {np}{np.join(f'{classes[MEMBERS[looter]["class"]]} {MEMBERS[looter]["char"].title()} {lootban(looter)}' for looter in LOOT[conditions]["have"])}'''
+                 │   │  │                                                                                                             │    └ 'Воля Смертоносного'
+                 │   │  │                                                                                                             └ {'Воля Смертоносного': {'slot': 'trinket', 'ilvl': 277, 'caste': 'melee', 'description': 'Если на персонаже: Снижает эффектив...
+                 │   │  └ <method 'join' of 'str' objects>
+                 │   └ '\n'
+                 └ '\n'
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 151, in <genexpr>
+    Полутавшие: {np}{np.join(f'{classes[MEMBERS[looter]["class"]]} {MEMBERS[looter]["char"].title()} {lootban(looter)}' for looter in LOOT[conditions]["have"])}'''
+                                                                                                                            └ 'елисей'
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 132, in lootban
+    if MEMBERS[looter]["lootban"] != 0:
+       │       └ 'елисей'
+       └ {'Empty': {'id': 123, 'name': 'zalupa', 'class': 'dk', 'char': 'zalupa', 'banloot': 0}, 'елисей': {'id': 710395621688737892, ...
+
+KeyError: 'lootban'
+2023-10-20T13:32:41.486659+0300 || DEBUG || ---LOGED---
+2023-10-20T13:32:42.256138+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (10484), thread 'MainThread' (12492):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 37, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x000001D3ACD91300>
+    └ <discord.client.Client object at 0x000001D3A96DD450>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001D3ACE6E840>
+    │       └ <function run at 0x000001D3AB653060>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001D3ACE3DB70>
+           │      └ <function Runner.run at 0x000001D3AB6A8AE0>
+           └ <asyncio.runners.Runner object at 0x000001D3ACE7C2D0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001D3AB6A65C0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001D3ACE7C2D0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001D3AB7C2480>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001D3AB6A8360>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001D3AB64C400>
+    └ <Handle <TaskStepMethWrapper object at 0x000001D3ACE67FD0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001D3ACE67FD0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001D3ACE67FD0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001D3ACE67FD0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164873825041793105 channel=<TextChannel id=866252762853670924 name='общее' position=1 nsfw=False news=False cat...
+          └ <function on_message at 0x000001D3ACE6E7A0>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 34, in on_message
+    case '/пиксель'     | '/object'      : await send(return_object(author_name, author_id, conditions))
+                                                 │    │             │            │          └ ['Воля', 'Смертоносного']
+                                                 │    │             │            └ 710395621688737892
+                                                 │    │             └ 'elisey_iz_kkr'
+                                                 │    └ <function return_object at 0x000001D3ACE6E340>
+                                                 └ <function on_message.<locals>.send at 0x000001D3ACE8B1A0>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 151, in return_object
+    Полутавшие: {np}{np.join(f'{classes[MEMBERS[looter]["class"]]} {MEMBERS[looter]["char"].title()} {lootban(looter)}' for looter in LOOT[conditions]["have"])}'''
+                 │   │  │                                                                                                             │    └ 'Воля Смертоносного'
+                 │   │  │                                                                                                             └ {'Воля Смертоносного': {'slot': 'trinket', 'ilvl': 277, 'caste': 'melee', 'description': 'Если на персонаже: Снижает эффектив...
+                 │   │  └ <method 'join' of 'str' objects>
+                 │   └ '\n'
+                 └ '\n'
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 151, in <genexpr>
+    Полутавшие: {np}{np.join(f'{classes[MEMBERS[looter]["class"]]} {MEMBERS[looter]["char"].title()} {lootban(looter)}' for looter in LOOT[conditions]["have"])}'''
+                                                                                                                            └ 'елисей'
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 133, in lootban
+    return f':warning:ЛУТБАН:warning: - {MEMBERS[looter]["lootban"]} кд'
+
+KeyError: 'lootban'
+2023-10-20T13:33:11.759445+0300 || DEBUG || ---LOGED---
+2023-10-20T13:33:12.077428+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T14:04:11.948380+0300 || DEBUG || ---LOGED---
+2023-10-20T14:04:18.230309+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T14:04:29.021025+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T14:05:23.360609+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /give (fail)
+2023-10-20T14:05:57.376252+0300 || DEBUG || ---LOGED---
+2023-10-20T14:05:59.765309+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /give (fail)
+2023-10-20T14:06:31.398184+0300 || DEBUG || ---LOGED---
+2023-10-20T14:06:33.036362+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (10264), thread 'MainThread' (14092):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 38, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x0000027E5D121300>
+    └ <discord.client.Client object at 0x0000027E5BB91B50>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x0000027E5D1FEC00>
+    │       └ <function run at 0x0000027E5B9E3060>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x0000027E5D1CDC60>
+           │      └ <function Runner.run at 0x0000027E5BA38AE0>
+           └ <asyncio.runners.Runner object at 0x0000027E5D1E2890>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x0000027E5BA365C0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x0000027E5D1E2890>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x0000027E5BB56480>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000027E5BA38360>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000027E5B9DC400>
+    └ <Handle <TaskStepMethWrapper object at 0x0000027E5D5D44F0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x0000027E5D5D44F0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x0000027E5D5D44F0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x0000027E5D5D44F0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164882342809186305 channel=<TextChannel id=866252762853670924 name='общее' position=1 nsfw=False news=False cat...
+          └ <function on_message at 0x0000027E5D1FEB60>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 35, in on_message
+    case '/отдать'      | '/give'        : await send(give_object(author_name, author_id, conditions))
+                                                 │    │           │            │          └ ['воля', 'смертоносного']
+                                                 │    │           │            └ 710395621688737892
+                                                 │    │           └ 'elisey_iz_kkr'
+                                                 │    └ <function give_object at 0x0000027E5D1FE700>
+                                                 └ <function on_message.<locals>.send at 0x0000027E5D21B560>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 189, in give_object
+    LOOT[conditions]["queue"]
+    │    └ 'воля смертоносного'
+    └ {'admins': [710395621688737892]}
+
+KeyError: 'воля смертоносного'
+2023-10-20T14:09:13.084738+0300 || DEBUG || ---LOGED---
+2023-10-20T14:09:15.313301+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (18352), thread 'MainThread' (5596):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 38, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x000002317A711300>
+    └ <discord.client.Client object at 0x00000231791E1B50>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000002317A7EEC00>
+    │       └ <function run at 0x0000023179073060>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000002317A7BDC60>
+           │      └ <function Runner.run at 0x00000231790B8AE0>
+           └ <asyncio.runners.Runner object at 0x000002317A7D2890>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x00000231790B65C0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002317A7D2890>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x00000231791A6480>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x00000231790B8360>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002317906C400>
+    └ <Handle <TaskStepMethWrapper object at 0x000002317ABC4490>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000002317ABC4490>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000002317ABC4490>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000002317ABC4490>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164883023787986944 channel=<TextChannel id=866252762853670924 name='общее' position=1 nsfw=False news=False cat...
+          └ <function on_message at 0x000002317A7EEB60>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 35, in on_message
+    case '/отдать'      | '/give'        : await send(give_object(author_name, author_id, conditions))
+                                                 │    │           │            │          └ ['воля', 'смертоносного']
+                                                 │    │           │            └ 710395621688737892
+                                                 │    │           └ 'elisey_iz_kkr'
+                                                 │    └ <function give_object at 0x000002317A7EE700>
+                                                 └ <function on_message.<locals>.send at 0x000002317A80B380>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 189, in give_object
+    LOOT[conditions]["queue"]
+    │    └ 'воля смертоносного'
+    └ {'Воля Смертоносного': {'slot': 'trinket', 'ilvl': 277, 'caste': 'melee', 'description': 'Если на персонаже: Снижает эффектив...
+
+KeyError: 'воля смертоносного'
+2023-10-20T14:09:45.729941+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /give (success)
+2023-10-20T14:19:30.871362+0300 || DEBUG || ---LOGED---
+2023-10-20T14:19:45.145461+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /lootban (success)
+2023-10-20T14:19:54.521015+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T14:20:02.960723+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /lootban (success)
+2023-10-20T14:20:07.670635+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T14:33:30.884727+0300 || DEBUG || ---LOGED---
+2023-10-20T14:33:50.331467+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /registration (success)
+2023-10-20T14:33:56.935960+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T14:34:30.756374+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /change (success)
+2023-10-20T14:34:51.243978+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (fail)
+2023-10-20T14:35:12.101534+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (fail)
+2023-10-20T14:35:48.155312+0300 || DEBUG || ---LOGED---
+2023-10-20T14:35:49.788796+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T14:38:04.695244+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /lootban (success)
+2023-10-20T14:38:16.187720+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (fail)
+2023-10-20T14:38:22.445658+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T14:38:49.058629+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /give (success)
+2023-10-20T14:38:55.068579+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T14:40:24.463204+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /members (success)
+2023-10-20T14:43:32.114937+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T14:43:48.233341+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /give (success)
+2023-10-20T15:05:51.826948+0300 || DEBUG || ---LOGED---
+2023-10-20T15:05:53.864983+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (fail)
+2023-10-20T15:06:20.436562+0300 || DEBUG || ---LOGED---
+2023-10-20T15:06:21.838382+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (15208), thread 'MainThread' (4744):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 39, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x000001A6FC4E1260>
+    └ <discord.client.Client object at 0x000001A6F8DD14D0>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001A6FC5BEE80>
+    │       └ <function run at 0x000001A6FADA2FC0>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001A6FC58DC60>
+           │      └ <function Runner.run at 0x000001A6FADF8A40>
+           └ <asyncio.runners.Runner object at 0x000001A6FB8567D0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001A6FADF6520>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001A6FB8567D0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001A6FB3163E0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001A6FADF82C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001A6FAD9C360>
+    └ <Handle <TaskStepMethWrapper object at 0x000001A6FC994AC0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001A6FC994AC0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001A6FC994AC0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001A6FC994AC0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1164897396203982909 channel=<TextChannel id=1164886134137045024 name='общее' position=1 nsfw=False news=False ca...
+          └ <function on_message at 0x000001A6FC5BEDE0>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 34, in on_message
+    case '/пиксель'     | '/object'      : await send(return_object(author_name, author_id, conditions))
+                                                 │    │             │            │          └ ['воля', 'смертоносного']
+                                                 │    │             │            └ 710395621688737892
+                                                 │    │             └ 'elisey_iz_kkr'
+                                                 │    └ <function return_object at 0x000001A6FC5BE200>
+                                                 └ <function on_message.<locals>.send at 0x000001A6FC5DF920>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 156, in return_object
+    Очередь: {np}{np.join(f'{return_count(looter)}. {classes[MEMBERS[looter]["class"]]} {MEMBERS[looter]["char"].title()} {lootban_object(looter)}' for looter in LOOT[conditions]["queue"])}
+              │   │  │                                                                                                                                            │    └ 'воля смертоносного'
+              │   │  │                                                                                                                                            └ {'воля смертоносного': {'slot': 'trinket', 'ilvl': 277, 'caste': 'melee', 'description': 'Если на персонаже: Снижает эффектив...
+              │   │  └ <method 'join' of 'str' objects>
+              │   └ '\n'
+              └ '\n'
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 156, in <genexpr>
+    Очередь: {np}{np.join(f'{return_count(looter)}. {classes[MEMBERS[looter]["class"]]} {MEMBERS[looter]["char"].title()} {lootban_object(looter)}' for looter in LOOT[conditions]["queue"])}
+                                                                                                                                                        └ 'сыч'
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 138, in return_count
+    while MEMBERS.keys()[count] != looter:
+          │       │      │         └ 'сыч'
+          │       │      └ 0
+          │       └ <method 'keys' of 'dict' objects>
+          └ {'Empty': {'id': 123, 'name': 'zalupa', 'class': 'dk', 'char': 'zalupa', 'banloot': 0}, 'елисей': {'id': 710395621688737892, ...
+
+TypeError: 'dict_keys' object is not subscriptable
+2023-10-20T15:07:40.730397+0300 || DEBUG || ---LOGED---
+2023-10-20T15:07:42.186034+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T15:10:21.430444+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T15:10:35.872611+0300 || DEBUG || ---LOGED---
+2023-10-20T15:10:37.870602+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T15:11:19.115583+0300 || DEBUG || ---LOGED---
+2023-10-20T15:11:21.113553+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T17:56:32.623789+0300 || DEBUG || ---LOGED---
+2023-10-20T17:56:39.977438+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T17:57:23.717075+0300 || DEBUG || ---LOGED---
+2023-10-20T17:57:26.367669+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T17:59:06.915710+0300 || DEBUG || ---LOGED---
+2023-10-20T18:00:21.760381+0300 || DEBUG || ---LOGED---
+2023-10-20T18:00:33.500015+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T18:01:46.577454+0300 || DEBUG || ---LOGED---
+2023-10-20T18:02:39.469920+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T18:03:35.045956+0300 || DEBUG || ---LOGED---
+2023-10-20T20:56:08.233540+0300 || DEBUG || ---LOGED---
+2023-10-20T21:04:53.292927+0300 || DEBUG || ---LOGED---
+2023-10-20T21:05:03.171143+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T21:12:43.122297+0300 || DEBUG || ---LOGED---
+2023-10-20T21:12:49.053628+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T21:15:30.136949+0300 || DEBUG || ---LOGED---
+2023-10-20T21:15:31.846332+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T21:16:23.534113+0300 || DEBUG || ---LOGED---
+2023-10-20T21:16:25.654588+0300 || ERROR || An error has been caught in function 'on_raw_reaction_add', process 'MainProcess' (18488), thread 'MainThread' (8556):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 48, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x000001B3931513A0>
+    └ <discord.client.Client object at 0x000001B3931D8C90>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001B393237600>
+    │       └ <function run at 0x000001B391A23100>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001B3931FD300>
+           │      └ <function Runner.run at 0x000001B391A6CB80>
+           └ <asyncio.runners.Runner object at 0x000001B393229290>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001B391A6A660>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001B393229290>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001B391F8A520>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001B391A6C400>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001B391A1C4A0>
+    └ <Handle <TaskStepMethWrapper object at 0x000001B3935D5AE0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001B3935D5AE0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001B3935D5AE0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001B3935D5AE0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<RawReactionActionEvent message_id=1164990303556620421 user_id=710395621688737892 channel_id=1164886134137045024 guild_id=11...
+          └ <function on_raw_reaction_add at 0x000001B393237560>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 45, in on_raw_reaction_add
+    await loot_by_reaction()
+          └ <function loot_by_reaction at 0x000001B393236E80>
+
+TypeError: loot_by_reaction() missing 3 required positional arguments: 'author_name', 'author_id', and 'emoji'
+2023-10-20T21:16:52.344571+0300 || ERROR || An error has been caught in function 'on_raw_reaction_add', process 'MainProcess' (17364), thread 'MainThread' (17976):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 48, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x000002A985F61300>
+    └ <discord.client.Client object at 0x000002A985FEB1D0>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000002A986047560>
+    │       └ <function run at 0x000002A984853060>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000002A98600D300>
+           │      └ <function Runner.run at 0x000002A98489CAE0>
+           └ <asyncio.runners.Runner object at 0x000002A986039390>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000002A98489A5C0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002A986039390>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002A98499A480>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002A98489C360>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002A98484C400>
+    └ <Handle <TaskStepMethWrapper object at 0x000002A9863D98A0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000002A9863D98A0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000002A9863D98A0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000002A9863D98A0>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<RawReactionActionEvent message_id=1164990303556620421 user_id=710395621688737892 channel_id=1164886134137045024 guild_id=11...
+          └ <function on_raw_reaction_add at 0x000002A9860474C0>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 45, in on_raw_reaction_add
+    loot_by_reaction()
+    └ <function loot_by_reaction at 0x000002A986046DE0>
+
+TypeError: loot_by_reaction() missing 3 required positional arguments: 'author_name', 'author_id', and 'emoji'
+2023-10-20T21:16:52.573623+0300 || DEBUG || ---LOGED---
+2023-10-20T21:19:10.269142+0300 || DEBUG || ---LOGED---
+2023-10-20T21:19:34.203866+0300 || DEBUG || ---LOGED---
+2023-10-20T21:44:30.224556+0300 || DEBUG || ---LOGED---
+2023-10-20T21:45:28.430359+0300 || DEBUG || ---LOGED---
+2023-10-20T21:45:41.662744+0300 || DEBUG || ---LOGED---
+2023-10-20T21:45:43.465148+0300 || ERROR || An error has been caught in function 'on_raw_reaction_add', process 'MainProcess' (14008), thread 'MainThread' (11232):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 47, in <module>
+    client.run('MTEyMTUxMTYzMjAxOTkyMzA3Ng.Gy_7ab.eZDOkA-Z3yjb1Vs7a0PihwVa8cA2UGZfVCFkBM')
+    │      └ <function Client.run at 0x000001E06DFB5300>
+    └ <discord.client.Client object at 0x000001E06A8A3DD0>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001E06E0976A0>
+    │       └ <function run at 0x000001E06C873060>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001E06E05D300>
+           │      └ <function Runner.run at 0x000001E06C8CCAE0>
+           └ <asyncio.runners.Runner object at 0x000001E06E099150>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001E06C8CA5C0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001E06E099150>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001E06CDEA480>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001E06C8CC360>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001E06C86C400>
+    └ <Handle <TaskStepMethWrapper object at 0x000001E06E425A20>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001E06E425A20>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001E06E425A20>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001E06E425A20>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<RawReactionActionEvent message_id=1164990303556620421 user_id=710395621688737892 channel_id=1164886134137045024 guild_id=11...
+          └ <function on_raw_reaction_add at 0x000001E06E097600>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 44, in on_raw_reaction_add
+    loot_by_reaction(payload.member, payload.user_id, payload.emoji, payload.message_id)
+    │                │       │       │       │        │       │      │       └ <member 'message_id' of 'RawReactionActionEvent' objects>
+    │                │       │       │       │        │       │      └ <RawReactionActionEvent message_id=1164990303556620421 user_id=710395621688737892 channel_id=1164886134137045024 guild_id=116...
+    │                │       │       │       │        │       └ <member 'emoji' of 'RawReactionActionEvent' objects>
+    │                │       │       │       │        └ <RawReactionActionEvent message_id=1164990303556620421 user_id=710395621688737892 channel_id=1164886134137045024 guild_id=116...
+    │                │       │       │       └ <member 'user_id' of 'RawReactionActionEvent' objects>
+    │                │       │       └ <RawReactionActionEvent message_id=1164990303556620421 user_id=710395621688737892 channel_id=1164886134137045024 guild_id=116...
+    │                │       └ <member 'member' of 'RawReactionActionEvent' objects>
+    │                └ <RawReactionActionEvent message_id=1164990303556620421 user_id=710395621688737892 channel_id=1164886134137045024 guild_id=116...
+    └ <function loot_by_reaction at 0x000001E06E096F20>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 256, in loot_by_reaction
+    object_ = CASHE["give_object"][cashe_id]
+              │                    └ 1164990303556620421
+              └ {'give_object': {'1164940449711140997': 'воля смертоносного', '1164941234821943387': 'воля смертоносного', '11649417630903174...
+
+KeyError: 1164990303556620421
+2023-10-20T21:47:08.046753+0300 || DEBUG || ---LOGED---
+2023-10-20T21:52:24.576497+0300 || DEBUG || ---LOGED---
+2023-10-20T21:52:27.794219+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T21:52:38.169547+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> рома)
+2023-10-20T21:52:45.225130+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T21:52:52.327723+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> транкшот)
+2023-10-20T21:53:00.532960+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T21:53:15.391294+0300 || DEBUG || ---LOGED---
+2023-10-20T21:53:19.516220+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> сыч)
+2023-10-20T22:05:31.117527+0300 || DEBUG || ---LOGED---
+2023-10-20T22:05:36.180662+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> какиш)
+2023-10-20T22:06:03.536646+0300 || DEBUG || ---LOGED---
+2023-10-20T22:06:06.062213+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T22:06:10.938307+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> катана)
+2023-10-20T22:19:45.030695+0300 || DEBUG || ---LOGED---
+2023-10-20T22:19:47.737216+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T22:19:54.083840+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> казах)
+2023-10-20T22:26:20.881121+0300 || DEBUG || ---LOGED---
+2023-10-20T22:26:24.729984+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T22:28:47.408779+0300 || DEBUG || ---LOGED---
+2023-10-20T22:28:50.633503+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T22:29:57.371902+0300 || DEBUG || ---LOGED---
+2023-10-20T22:30:03.762080+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T22:30:16.181314+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> транкшот)
+2023-10-20T22:30:37.663532+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T22:30:51.105548+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-20T22:34:53.283818+0300 || DEBUG || ---LOGED---
+2023-10-20T22:34:55.613340+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-21T00:04:25.587926+0300 || DEBUG || ---LOGED---
+2023-10-21T00:04:27.484351+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /object (success)
+2023-10-21T00:06:24.507672+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> Empty)
+2023-10-21T00:06:26.037015+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> рома)
+2023-10-21T00:06:27.260290+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> какиш)
+2023-10-21T00:06:53.022987+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> елисей)
+2023-10-21T00:06:54.979426+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /loot_by_reaction (воля смертоносного -> сыч)
+2023-10-24T23:09:30.827004+0300 || DEBUG || ---LOGED---
+2023-10-24T23:09:34.569535+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-24T23:10:33.770439+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-24T23:10:33.929482+0300 || DEBUG || ---LOGED---
+2023-10-24T23:12:24.434822+0300 || DEBUG || ---LOGED---
+2023-10-24T23:12:28.394189+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-24T23:17:42.112338+0300 || DEBUG || ---LOGED---
+2023-10-24T23:17:43.718247+0300 || DEBUG || elisey_iz_kkr | 710395621688737892 --> /admins (success)
+2023-10-26T23:37:11.549056+0300 || DEBUG || ---LOGED---
+2023-10-26T23:37:33.228073+0300 || DEBUG || ---LOGED---
+2023-10-27T00:17:15.421455+0300 || DEBUG || ---LOGED---
+2023-10-27T00:22:55.740843+0300 || DEBUG || ---LOGED---
+2023-10-27T00:24:00.217532+0300 || DEBUG || ---LOGED---
+2023-10-27T00:26:56.723536+0300 || DEBUG || ---LOGED---
+2023-10-27T00:28:05.662408+0300 || DEBUG || ---LOGED---
+2023-10-27T18:34:52.108663+0300 || DEBUG || ---LOGED---
+2023-10-27T18:35:26.352082+0300 || DEBUG || ---LOGED---
+2023-10-27T18:37:29.983764+0300 || DEBUG || ---LOGED---
+2023-10-27T18:38:21.049863+0300 || DEBUG || ---LOGED---
+2023-10-27T18:40:05.249028+0300 || DEBUG || ---LOGED---
+2023-10-27T18:52:49.345257+0300 || DEBUG || ---LOGED---
+2023-10-27T18:54:36.155210+0300 || DEBUG || ---LOGED---
+2023-10-27T19:02:00.693033+0300 || DEBUG || ---LOGED---
+2023-10-29T17:34:43.471814+0300 || DEBUG || ---LOGED---

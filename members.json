@@ -1,0 +1,58 @@
+{
+   "Empty": {
+      "id": 123,
+      "name": "zalupa",
+      "class": "dk",
+      "char": "zalupa",
+      "banloot": 0
+   },
+   "елисей": {
+      "id": 710395621688737892,
+      "name": "elisey_iz_kkr",
+      "char": "шадоукойл",
+      "class": "warlock",
+      "banloot": 0
+   },
+   "сыч": {
+      "id": 710395621688737892,
+      "name": "elisey_iz_kkr",
+      "char": "сыч",
+      "class": "paladin",
+      "banloot": 0
+   },
+   "рома": {
+      "id": 710395621688737892,
+      "name": "elisey_iz_kkr",
+      "char": "нефиг",
+      "class": "shaman",
+      "banloot": 0
+   },
+   "транкшот": {
+      "id": 710395621688737892,
+      "name": "elisey_iz_kkr",
+      "char": "Милфрил",
+      "class": "hunter",
+      "banloot": 2
+   },
+   "катана": {
+      "id": 710395621688737892,
+      "name": "elisey_iz_kkr",
+      "char": "катанамаста",
+      "class": "rogue",
+      "banloot": 0
+   },
+   "какиш": {
+      "id": 710395621688737892,
+      "name": "elisey_iz_kkr",
+      "char": "донкакиш",
+      "class": "paladin",
+      "banloot": 0
+   },
+   "казах": {
+      "id": 710395621688737892,
+      "name": "elisey_iz_kkr",
+      "char": "лизочка",
+      "class": "warlock",
+      "banloot": 1
+   }
+}

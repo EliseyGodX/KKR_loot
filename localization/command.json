@@ -1,0 +1,22 @@
+{
+    "eng": {
+        "/admins": "/admins",
+        "/registration": "/registration",
+        "/members": "/members",
+        "/change": "/change",
+        "/object": "/object",
+        "/give": "/give",
+        "/lootban": "/lootban"
+    },
+
+
+    "ru": {
+        "/admins": "/админы",
+        "/registration": "/регистрация",
+        "/members": "/пользователи",
+        "/change": "/изменить",
+        "/object": "/пиксель",
+        "/give": "/дать",
+        "/lootban": "/лутбан"
+    }
+}
