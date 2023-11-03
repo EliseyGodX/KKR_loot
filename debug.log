@@ -1431,3 +1431,382 @@ KeyError: 1164990303556620421
 2023-10-27T18:54:36.155210+0300 || DEBUG || ---LOGED---
 2023-10-27T19:02:00.693033+0300 || DEBUG || ---LOGED---
 2023-10-29T17:34:43.471814+0300 || DEBUG || ---LOGED---
+2023-10-30T00:11:01.539306+0300 || DEBUG || ---LOGED---
+2023-10-30T18:31:44.217082+0300 || ERROR || An error has been caught in function 'on_ready', process 'MainProcess' (8340), thread 'MainThread' (15196):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 95, in <module>
+    client.run(input('token: '))
+    │      └ <function Client.run at 0x000001C19FCA53A0>
+    └ <discord.client.Client object at 0x000001C19F007750>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001C19FD98220>
+    │       └ <function run at 0x000001C19E567100>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001C19FD65D50>
+           │      └ <function Runner.run at 0x000001C19E5BCB80>
+           └ <asyncio.runners.Runner object at 0x000001C19C3C1550>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001C19E5BA660>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001C19C3C1550>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001C19EADA520>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001C19E5BC400>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001C19E55C4A0>
+    └ <Handle <TaskStepMethWrapper object at 0x000001C19FD93700>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001C19FD93700>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001C19FD93700>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001C19FD93700>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ ()
+          └ <function on_ready at 0x000001C19FD7FF60>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 19, in on_ready
+    language_initialization()
+    └ <function language_initialization at 0x000001C19FD7D1C0>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 41, in language_initialization
+    LANGUAGE = open_json('localization/content.json')
+               └ <function open_json at 0x000001C19FCAF880>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 29, in open_json
+    with open(file +'.json', encoding='utf-8') as f:           #
+              └ 'localization/content.json'
+
+FileNotFoundError: [Errno 2] No such file or directory: 'localization/content.json.json'
+2023-10-30T18:31:44.265094+0300 || DEBUG || ---LOGED---
+2023-10-30T18:32:39.068138+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T18:32:39.069138+0300 || DEBUG || ---LOGED---
+2023-10-30T18:35:26.446427+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T18:35:26.447428+0300 || DEBUG || ---LOGED---
+2023-10-30T18:37:13.261004+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T18:37:13.262004+0300 || DEBUG || ---LOGED---
+2023-10-30T18:39:30.266945+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T18:39:30.267946+0300 || DEBUG || ---LOGED---
+2023-10-30T18:40:55.060187+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T18:40:55.061187+0300 || DEBUG || ---LOGED---
+2023-10-30T18:50:34.944696+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T18:50:34.945697+0300 || DEBUG || ---LOGED---
+2023-10-30T18:52:08.947104+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T18:52:08.948104+0300 || DEBUG || ---LOGED---
+2023-10-30T18:53:25.542949+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T18:53:25.542949+0300 || DEBUG || ---LOGED---
+2023-10-30T19:09:22.685362+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T19:09:22.685362+0300 || DEBUG || ---LOGED---
+2023-10-30T19:22:53.866789+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T19:22:53.867789+0300 || DEBUG || ---LOGED---
+2023-10-30T19:23:12.146270+0300 || ERROR || An error has been caught in function 'on_raw_reaction_add', process 'MainProcess' (14112), thread 'MainThread' (11428):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 106, in <module>
+    client.run(input('token: '))
+    │      └ <function Client.run at 0x000001E7159453A0>
+    └ <discord.client.Client object at 0x000001E712305010>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001E715A38220>
+    │       └ <function run at 0x000001E714257100>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001E715A05D50>
+           │      └ <function Runner.run at 0x000001E7142A0B80>
+           └ <asyncio.runners.Runner object at 0x000001E715A32150>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001E71429A660>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001E715A32150>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001E71478A520>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001E7142A0400>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001E7142504A0>
+    └ <Handle <TaskStepMethWrapper object at 0x000001E715A26C80>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001E715A26C80>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001E715A26C80>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001E715A26C80>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<RawReactionActionEvent message_id=1168585890499670066 user_id=710395621688737892 channel_id=1167491479745343528 guild_id=11...
+          └ <function on_raw_reaction_add at 0x000001E715A380E0>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 80, in on_raw_reaction_add
+    GUILDS[str(payload.guild_id)].guild_language, dict_embed = new_guild(
+    │          │       │                                       └ <function new_guild at 0x000001E715A1F740>
+    │          │       └ <member 'guild_id' of 'RawReactionActionEvent' objects>
+    │          └ <RawReactionActionEvent message_id=1168585890499670066 user_id=710395621688737892 channel_id=1167491479745343528 guild_id=116...
+    └ {'1164886134137045022': <guilds.Guilds object at 0x000001E7159D45D0>}
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 306, in new_guild
+    if flag is False:
+
+UnboundLocalError: cannot access local variable 'flag' where it is not associated with a value
+2023-10-30T19:33:21.906876+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T19:33:21.907876+0300 || DEBUG || ---LOGED---
+2023-10-30T19:33:46.194783+0300 || ERROR || An error has been caught in function 'on_raw_reaction_add', process 'MainProcess' (6244), thread 'MainThread' (4728):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 112, in <module>
+    client.run(input('token: '))
+    │      └ <function Client.run at 0x000001E2773953A0>
+    └ <discord.client.Client object at 0x000001E27668A950>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001E277484540>
+    │       └ <function run at 0x000001E275C57100>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001E277459120>
+           │      └ <function Runner.run at 0x000001E275CB0B80>
+           └ <asyncio.runners.Runner object at 0x000001E277481890>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001E275CAA660>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001E277481890>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001E2761CA520>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001E275CB0400>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001E275C504A0>
+    └ <Handle <TaskStepMethWrapper object at 0x000001E277831060>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001E277831060>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001E277831060>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001E277831060>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<RawReactionActionEvent message_id=1168588505232969729 user_id=710395621688737892 channel_id=1167491479745343528 guild_id=11...
+          └ <function on_raw_reaction_add at 0x000001E277484400>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 86, in on_raw_reaction_add
+    GUILDS[str(payload.guild_id)].guild_language, dict_embed = new_guild(
+    │          │       │                                       └ <function new_guild at 0x000001E277477A60>
+    │          │       └ <member 'guild_id' of 'RawReactionActionEvent' objects>
+    │          └ <RawReactionActionEvent message_id=1168588505232969729 user_id=710395621688737892 channel_id=1167491479745343528 guild_id=116...
+    └ {'1164886134137045022': <guilds.Guilds object at 0x000001E2743063D0>}
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\methods.py", line 306, in new_guild
+    if flag is False:
+
+UnboundLocalError: cannot access local variable 'flag' where it is not associated with a value
+2023-10-30T19:39:25.578813+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T19:39:25.579813+0300 || DEBUG || ---LOGED---
+2023-10-30T19:39:53.803947+0300 || DEBUG || NEW_GUILD --|-- <coroutine object Client.fetch_guild at 0x0000023460B785E0> | 1164886134137045022 --|-- <coroutine object Client.fetch_user at 0x0000023460ACAC00> | 710395621688737892 --> FAIL (incorrect language)
+2023-10-30T19:59:33.993330+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T19:59:33.994330+0300 || DEBUG || ---LOGED---
+2023-10-30T20:09:19.466192+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T20:09:19.467192+0300 || DEBUG || ---LOGED---
+2023-10-30T20:09:32.515235+0300 || DEBUG || NEW_GUILD --|-- <coroutine object Client.fetch_guild at 0x000001D25F7EB1F0> | 1164886134137045022 --|-- <coroutine object Client.fetch_user at 0x000001D25FBD44A0> | 710395621688737892 --> FAIL (incorrect language)
+2023-10-30T20:09:36.121119+0300 || DEBUG || NEW_GUILD --|-- <coroutine object Client.fetch_guild at 0x000001D25F7EB1F0> | 1164886134137045022 --|-- <coroutine object Client.fetch_user at 0x000001D25FBD42E0> | 710395621688737892 --> FAIL (incorrect language)
+2023-10-30T20:10:29.743690+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T20:10:29.744690+0300 || DEBUG || ---LOGED---
+2023-10-30T20:10:41.199005+0300 || DEBUG || NEW_GUILD --|-- <coroutine object Client.fetch_guild at 0x00000158FC1CB1F0> | 1164886134137045022 --|-- <coroutine object Client.fetch_user at 0x00000158FC5B44A0> | 710395621688737892 --> FAIL (incorrect language)
+2023-10-30T20:12:46.204829+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T20:12:46.205829+0300 || DEBUG || ---LOGED---
+2023-10-30T20:12:56.276422+0300 || DEBUG || NEW_GUILD --|-- <coroutine object Client.fetch_guild at 0x0000022EBA5FA3E0> | 1164886134137045022 --|-- <coroutine object Client.fetch_user at 0x0000022EBA9E4580> | 710395621688737892 --> FAIL (incorrect language)
+2023-10-30T20:13:10.791371+0300 || DEBUG || NEW_GUILD --|-- <coroutine object Client.fetch_guild at 0x0000022EBA5FA3E0> | 1164886134137045022 --|-- <coroutine object Client.fetch_user at 0x0000022EBA9E43C0> | 710395621688737892 --> FAIL (incorrect language)
+2023-10-30T20:14:09.581281+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T20:14:09.582281+0300 || DEBUG || ---LOGED---
+2023-10-30T20:14:27.887895+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T20:14:27.888896+0300 || DEBUG || ---LOGED---
+2023-10-30T20:14:34.805490+0300 || DEBUG || NEW_GUILD --|-- <coroutine object Client.fetch_guild at 0x0000028503F371F0> | 1164886134137045022 --|-- <coroutine object Client.fetch_user at 0x0000028504324580> | 710395621688737892 --> FAIL (incorrect language)
+2023-10-30T20:21:54.599383+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-30T20:21:54.599383+0300 || DEBUG || ---LOGED---
+2023-10-30T20:22:09.950170+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> FAIL (incorrect language)
+2023-10-30T20:22:17.081564+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> FAIL (incorrect language)
+2023-10-30T20:22:19.730162+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> FAIL (incorrect language)
+2023-10-31T21:53:04.761706+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-31T21:53:04.762706+0300 || DEBUG || ---LOGED---
+2023-10-31T21:53:16.069733+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> FAIL (incorrect language)
+2023-10-31T21:55:08.181024+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-10-31T21:55:08.181024+0300 || DEBUG || ---LOGED---
+2023-10-31T21:55:18.941639+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> FAIL (incorrect language)
+2023-11-03T15:32:30.434167+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-03T15:32:30.436168+0300 || DEBUG || ---LOGED---
+2023-11-03T15:33:05.393256+0300 || ERROR || An error has been caught in function 'on_guild_join', process 'MainProcess' (8924), thread 'MainThread' (5988):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 112, in <module>
+    client.run(input('token: '))
+    │      └ <function Client.run at 0x000001D3521F5300>
+    └ <discord.client.Client object at 0x000001D350A91D10>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001D3522E4720>
+    │       └ <function run at 0x000001D350AD7060>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001D3522B9D50>
+           │      └ <function Runner.run at 0x000001D350B20AE0>
+           └ <asyncio.runners.Runner object at 0x000001D3522E2150>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001D350B1A5C0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001D3522E2150>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001D35102A480>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001D350B20360>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001D350AD0400>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Guild id=1164886134137045022 name='Тест' shard_id=0 chunked=False member_count=2>,)
+          └ <function on_guild_join at 0x000001D3522E4680>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 108, in on_guild_join
+    new_guild(['NEW_GUILD', await client.fetch_guild(guild.id), guild.id])
+    │                             │      │           │     │    │     └ <member 'id' of 'Guild' objects>
+    │                             │      │           │     │    └ <Guild id=1164886134137045022 name='Тест' shard_id=0 chunked=False member_count=2>
+    │                             │      │           │     └ <member 'id' of 'Guild' objects>
+    │                             │      │           └ <Guild id=1164886134137045022 name='Тест' shard_id=0 chunked=False member_count=2>
+    │                             │      └ <function Client.fetch_guild at 0x000001D3521FC860>
+    │                             └ <discord.client.Client object at 0x000001D350A91D10>
+    └ <function new_guild at 0x000001D3522D7D80>
+
+TypeError: new_guild() missing 2 required positional arguments: 'emoji' and 'log'
+2023-11-03T15:33:55.328667+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> FAIL (incorrect language)
+2023-11-03T15:38:26.159914+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-03T15:38:26.159914+0300 || DEBUG || ---LOGED---
+2023-11-03T15:38:39.283307+0300 || ERROR || An error has been caught in function 'on_guild_join', process 'MainProcess' (6960), thread 'MainThread' (15260):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 112, in <module>
+    client.run(input('token: '))
+    │      └ <function Client.run at 0x000001C366A35300>
+    └ <discord.client.Client object at 0x000001C3652E1D10>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001C366B24720>
+    │       └ <function run at 0x000001C365327060>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001C366AF9D50>
+           │      └ <function Runner.run at 0x000001C365370AE0>
+           └ <asyncio.runners.Runner object at 0x000001C366AC7BD0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001C36536A5C0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001C366AC7BD0>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001C36586A480>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001C365370360>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001C365320400>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Guild id=1164886134137045022 name='Тест' shard_id=0 chunked=False member_count=2>,)
+          └ <function on_guild_join at 0x000001C366B24680>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 108, in on_guild_join
+    new_guild(['NEW_GUILD', await client.fetch_guild(guild.id), guild.id])
+    │                             │      │           │     │    │     └ <member 'id' of 'Guild' objects>
+    │                             │      │           │     │    └ <Guild id=1164886134137045022 name='Тест' shard_id=0 chunked=False member_count=2>
+    │                             │      │           │     └ <member 'id' of 'Guild' objects>
+    │                             │      │           └ <Guild id=1164886134137045022 name='Тест' shard_id=0 chunked=False member_count=2>
+    │                             │      └ <function Client.fetch_guild at 0x000001C366A3C860>
+    │                             └ <discord.client.Client object at 0x000001C3652E1D10>
+    └ <function new_guild at 0x000001C366B17D80>
+
+TypeError: new_guild() missing 2 required positional arguments: 'emoji' and 'log'
+2023-11-03T15:38:41.913034+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)

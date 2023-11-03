@@ -4,7 +4,8 @@ from guilds import *
 
 logger.add('debug.log', format='{time} || {level} || {message}', rotation='2 MB')
 
-classes_emoji = {'dk': '<:dk:1164567710320050257>', 
+classes_emoji = {
+           'dk': '<:dk:1164567710320050257>', 
            'druid': '<:druid:1164567711775473806>', 
            'hunter': '<:hunter:1164567715462258699>', 
            'mage': '<:mage:1164567718196957306>', 
@@ -16,21 +17,40 @@ classes_emoji = {'dk': '<:dk:1164567710320050257>',
            'warrior': '<:warrior:1164567728993083422>'
            }
 
+color_embed = {
+            'success': 5763719,
+            'error': 15548997,
+            'important_change': 3426654
 
-def open_json(file: str) -> dict:                                      #
-    with open(file +'.json', encoding='utf-8') as f:           #
+}
+
+
+def open_json(file: str) -> dict:                              #
+    with open(file + '.json', encoding='utf-8') as f:          #
         DICT = json.load(f)                                    # open
     return DICT                                                # and
                                                                # close
-def close_json(file: str, DICT: dict) -> None:                         # json
+def close_json(file: str, DICT: dict) -> None:                 # json
     with open(file + '.json', 'w', encoding='utf-8') as f:     #
         json.dump(DICT, f, indent=3, ensure_ascii=False)       #
+
+
+@logger.catch
+def language_initialization() -> dict:
+    global LANGUAGE
+    LANGUAGE = open_json('localization/content')
+    close_json('localization/content.json', LANGUAGE)
+    logger.debug('---LANGUAGE_INITIALIZATION---')
 
 
 
 @logger.catch
 def logged(): 
-    logger.debug(f'---LOGED---')
+    logger.debug('---LOGED---')
+
+@logger.catch
+def new_guild_initialization(log): 
+    logger.debug(f'{log[0]} --|-- {log[1]} | {log[2]} --> SUCCESS')
 
 
 
@@ -280,9 +300,26 @@ def loot_by_reaction(author_name, author_id, emoji, supportive_id):
 
 
 @logger.catch
-def new_guild(guild_id: int, localization: dict, emoji) -> dict[str, str, int]:
-    pass
+def new_guild(LOCALISITION: dict, emoji, log: dict):
+    flag = False
+    print(LOCALISITION)
+    for lang in LOCALISITION:
+        print(lang, emoji, LOCALISITION[lang])
+        if LOCALISITION[lang] == str(emoji):
+            flag = True
+            break
+
+    if flag is False: 
+        print('.')
+        logger.debug(f'{log[0]} --|-- {log[1]} | {log[2]} --|-- {log[3]} | {log[4]} --> FAIL (incorrect language)')
+        return 'empty', {'title': 'ERROR!', 'description': 'incorrect language', 'colour': color_embed['error']}
+
+    logger.debug(f'{log[0]} --|-- {log[1]} | {log[2]} --|-- {log[3]} | {log[4]} --> SUCCESS ({lang})')
+    return lang, {'title': 'KKR_loot', 
+                  'description': LANGUAGE[lang]['Language changed successfully'], 
+                  'colour': color_embed['important_change']}
     
+
 
 
 
@@ -312,7 +349,7 @@ def return_empty_guilds():
     close_json('supportive', SUPPORTIVE)
     return SUPPORTIVE["empty_guilds"]
 
-def delete_empty_guild(id_):
+def delete_EmptyGuild(id_):
     SUPPORTIVE = open_json('supportive')
     SUPPORTIVE["empty_guilds"].pop(id_)
     close_json('supportive', SUPPORTIVE)
