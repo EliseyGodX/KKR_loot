@@ -1,97 +1,102 @@
 import discord
-from methods import *
+from scripts import *
 from guilds import *
+from loguru import logger
 
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 intents.message_content = True
 client = discord.Client(intents=intents)
 
 ID = 1121511632019923076
+OWNER = 710395621688737892
+keyword = 'kkr_loot'
+startswith = '/'
 
 GUILDS = {}
 
 LOCALISITION = {'eng': '🇺🇲', 
                 'ru': '🇷🇺'}
 
+###
+GUILDS[1164886134137045022] = Guilds(1164886134137045022, [710395621688737892])
+GUILDS[1164886134137045022].guild_language = 'eng'
+
 
 @client.event
 async def on_ready():
-    global GUILDS, LOCALISITION, ID
-    with open('localization/command.json', encoding='utf-8') as f:
-        COMMAND = json.load(f)
-    language_initialization()
+    global GUILDS, LOCALISITION, ID, COMMAND, OWNER, client
+    COMMAND = language_initialization()
     logged()
 
+
+@logger.catch
 @client.event
 async def on_message(message):
-
-    if (message.content.startswith('/') 
+    if (message.content.startswith(startswith) 
         and message.author.bot != True 
-        and message.channel.name == 'kkr_loot'
-        and GUILDS[str(message.guild.id)].guild_language != None):
+        and message.channel.name == keyword
+        and message.content.split(' ')[0].lower() 
+                    in COMMAND[(GUILDS[message.guild.id]).guild_language]  # existing command
+        and GUILDS[message.guild.id].guild_language != None):
 
-        def send_Embed(data_list):
-            return message.channel.send(embed = discord.Embed(
+        async def send_Embed(data_list):
+            if len(data_list) == 4: 
+                owner = client.get_user(OWNER)
+                print(owner, OWNER)
+                await owner.send(data_list[3])
+            await message.channel.send(embed = discord.Embed(
                 title=data_list[0],
                 description=data_list[1],
                 colour=data_list[2]))
         
         list_message = message.content.split(' ')
-        command = list_message[0].lower()
+        command = list_message[0].lower()  # command in the original language
         list_message.pop(0)
+
         try: conditions = list_message
         except: conditions = None
+
         author_name = message.author.name
         author_id = message.author.id
         guild_id = message.guild.id
 
-        log = [command, author_name, author_id, guild_id]
+        log = (command, 
+               await client.fetch_guild(guild_id), guild_id,
+               author_name, author_id)
 
-        msg = None
-
+        command = COMMAND[GUILDS[guild_id].guild_language][command]
+        print(command)  # command in english
+        language = GUILDS[guild_id].guild_language
+        
         match command:
+            case 'admins': await send_Embed(
+                admins(log, language, 
+                       admins=[(await client.fetch_user(GUILDS[guild_id].admins[_])).name for _ in range(len(GUILDS[guild_id].admins))]))
             
-            case '/админы'      | '/admins'      : await send_Embed(return_admin(author_name, author_id))
-            case '/регистрация' | '/registration': await send_Embed(registration(author_name, author_id, conditions))
-            case '/участники'   | '/members'     : await send_Embed(return_members(author_name, author_id))
-            case '/изменить'    | '/change'      : await send_Embed(change(author_name, author_id, conditions))
-            case '/пиксель'     | '/object'      : 
-                msg = await send_Embed(return_object(author_name, author_id, conditions, message.id))
-                emojis = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟'] 
-                for emoji in emojis: await msg.add_reaction(emoji)
-            case '/отдать'      | '/give'        : await send_Embed(give_object(author_name, author_id, conditions))
-            case '/лутбан'      | '/lootban'     : await send_Embed(lootban(author_name, author_id, conditions))
+        
 
-        if msg != None: supportive_add_GiveObject.give_object(msg.id)
+            
 
 
 
 @client.event
 async def on_raw_reaction_add(payload):
 
-    if (payload.user_id in GUILDS[str(payload.guild_id)].admins 
-        and str(payload.message_id) in supportive("give_object")
-        and payload.user_id != ID):
-        msg = loot_by_reaction(payload.member, payload.user_id, payload.emoji, str(payload.message_id))
-        await client.get_channel(payload.channel_id).send(msg)
-
-
-    elif (payload.user_id in GUILDS[str(payload.guild_id)].admins 
-          and GUILDS[str(payload.guild_id)].guild_language == 'empty'
-          and payload.user_id != ID):
-        log = ['Start_select_language', 
-               await client.fetch_guild(payload.guild_id), payload.guild_id, 
-               await client.fetch_user(payload.user_id), payload.user_id]
+    if (payload.user_id in GUILDS[payload.guild_id].admins   # Change language
+          and payload.user_id != ID
+          and GUILDS[payload.guild_id].guild_language is None):
         
-        GUILDS[str(payload.guild_id)].guild_language, dict_embed = new_guild(
+        log = ('start_select_language', 
+               await client.fetch_guild(payload.guild_id), payload.guild_id, 
+               await client.fetch_user(payload.user_id), payload.user_id)
+        
+        GUILDS[payload.guild_id].guild_language, dict_embed = start_select_language(
             LOCALISITION, payload.emoji, log)
         
         await client.get_channel(payload.channel_id).send(embed = discord.Embed(
                 title=dict_embed['title'],
                 description=dict_embed['description'],
                 colour=dict_embed['colour']))
-    
-   
         
 
 
@@ -103,10 +108,17 @@ async def on_guild_join(guild):
                 title='Hi!',
                 description='Please select the language below',
                 colour=1752220))
-        GUILDS[str(guild.id)] = Guilds(guild.id, [guild.owner_id])
+        GUILDS[guild.id] = Guilds(guild.id, [guild.owner_id])
         for lang in LOCALISITION: await msg.add_reaction(LOCALISITION[lang])
         new_guild_initialization(['NEW_GUILD', await client.fetch_guild(guild.id), guild.id])
         
         
+
+@client.event
+async def path_settings(guild_id):
+    pass
+
+
+
 if __name__ == "__main__":
     client.run(input('token: '))

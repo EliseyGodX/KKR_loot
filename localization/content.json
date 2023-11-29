@@ -1,11 +1,23 @@
 {
     "eng": {
+        "error_title": "ERROR!",
+        "error_content": "Unexpected error. The developer has already received a report about your problem",
+
+        "admins_title": "admins",
+        "admins_content": "Now they have administrator rights:",
+
         "Language changed successfully": "Language changed successfully"
         },
 
 
 
     "ru": {
+        "error_title": "ОШИБКА!",
+        "error_content": "Непредвиденная ошибка. Разработчик уже получил отчёт о вашей проблеме",
+
+        "admins_title": "админы",
+        "admins_content": "Сейчас обладают правами администратора:",
+
         "Language changed successfully": "Язык успешно изменён"
         }
 

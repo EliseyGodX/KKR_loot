@@ -1810,3 +1810,470 @@ Traceback (most recent call last):
 
 TypeError: new_guild() missing 2 required positional arguments: 'emoji' and 'log'
 2023-11-03T15:38:41.913034+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)
+2023-11-04T23:02:19.768166+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-04T23:02:19.769166+0300 || DEBUG || ---LOGED---
+2023-11-04T23:03:55.662622+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-04T23:04:56.561798+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-04T23:04:56.562799+0300 || DEBUG || ---LOGED---
+2023-11-04T23:05:04.133708+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-04T23:05:06.681071+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-04T23:05:11.215657+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)
+2023-11-04T23:05:14.980736+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)
+2023-11-27T18:31:15.570981+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T18:31:15.571981+0300 || DEBUG || ---LOGED---
+2023-11-27T18:33:00.714622+0300 || CRITICAL || ERROR IN LANGUAGE_INITIALIZATION: 
+2023-11-27T18:36:55.098099+0300 || CRITICAL || ERROR IN LANGUAGE_INITIALIZATION: 
+2023-11-27T18:37:24.092299+0300 || CRITICAL || ERROR IN LANGUAGE_INITIALIZATION: 
+2023-11-27T18:39:48.571141+0300 || CRITICAL || ERROR IN LANGUAGE_INITIALIZATION: [Errno 2] No such file or directory: 'localization/content.json'
+2023-11-27T19:04:22.257699+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:04:22.258699+0300 || DEBUG || ---LOGED---
+2023-11-27T19:04:48.746953+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T19:06:05.992717+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:06:05.993717+0300 || DEBUG || ---LOGED---
+2023-11-27T19:06:18.921277+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T19:08:43.485783+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:08:43.486783+0300 || DEBUG || ---LOGED---
+2023-11-27T19:08:52.030849+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T19:10:13.562758+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:10:13.563759+0300 || DEBUG || ---LOGED---
+2023-11-27T19:10:22.848693+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T19:13:20.559634+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:13:20.560635+0300 || DEBUG || ---LOGED---
+2023-11-27T19:13:36.776582+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:13:36.777582+0300 || DEBUG || ---LOGED---
+2023-11-27T19:13:47.166042+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T19:13:51.715625+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)
+2023-11-27T19:17:00.653524+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:17:00.654525+0300 || DEBUG || ---LOGED---
+2023-11-27T19:17:13.173855+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T19:17:17.490044+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)
+2023-11-27T19:18:52.166610+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:18:52.167611+0300 || DEBUG || ---LOGED---
+2023-11-27T19:18:59.254589+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T19:19:12.793521+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-27T19:20:55.879566+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:20:55.879566+0300 || DEBUG || ---LOGED---
+2023-11-27T19:21:03.471566+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T19:21:19.756717+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)
+2023-11-27T19:25:28.298521+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:25:28.299522+0300 || DEBUG || ---LOGED---
+2023-11-27T19:25:36.320319+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T19:25:41.666550+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-27T19:28:50.885871+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:28:50.886871+0300 || DEBUG || ---LOGED---
+2023-11-27T19:28:58.326486+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T19:29:03.021336+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-27T19:38:05.218191+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T19:38:05.219191+0300 || DEBUG || ---LOGED---
+2023-11-27T19:38:22.754736+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T19:38:26.752353+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)
+2023-11-27T19:38:58.301890+0300 || DEBUG || elisey_iz_kkr | elisey_iz_kkr --> /admins (success)
+2023-11-27T21:16:08.729660+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T21:16:08.729660+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T21:16:08.730682+0300 || DEBUG || ---LOGED---
+2023-11-27T21:16:25.087683+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T21:16:26.916329+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-27T21:16:42.719497+0300 || DEBUG || /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T21:18:42.475575+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T21:18:42.476576+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T21:18:42.476576+0300 || DEBUG || ---LOGED---
+2023-11-27T21:18:59.210976+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T21:19:02.337613+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-27T21:19:09.062599+0300 || DEBUG || /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T21:20:26.761538+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T21:20:26.762539+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T21:20:26.762539+0300 || DEBUG || ---LOGED---
+2023-11-27T21:20:36.912642+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T21:20:38.542603+0300 || DEBUG || Start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-27T21:20:45.907470+0300 || DEBUG || /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T21:55:36.018989+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T21:55:36.018989+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T21:55:36.019989+0300 || DEBUG || ---LOGED---
+2023-11-27T21:55:47.661629+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T21:55:49.423697+0300 || DEBUG || start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)
+2023-11-27T21:55:53.623994+0300 || DEBUG || /админы --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T21:56:01.380916+0300 || DEBUG || /админы --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T21:56:05.109093+0300 || DEBUG || /админы --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T21:56:25.795303+0300 || DEBUG || /админы --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T21:56:37.043582+0300 || DEBUG || /админы --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T21:56:47.894744+0300 || DEBUG || /админы --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T21:57:24.765035+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T21:57:24.766036+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T21:57:24.766036+0300 || DEBUG || ---LOGED---
+2023-11-27T21:57:44.139054+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T21:57:46.064956+0300 || DEBUG || start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-27T21:57:54.328931+0300 || DEBUG || /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T22:14:50.451590+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T22:14:50.452590+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T22:14:50.452590+0300 || DEBUG || ---LOGED---
+2023-11-27T22:15:07.919183+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T22:15:09.170473+0300 || DEBUG || start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)
+2023-11-27T22:15:17.410516+0300 || DEBUG || /админы --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T22:15:17.412517+0300 || ERROR || ERROR IN admins: /админы --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892
+can only join an iterable
+2023-11-27T22:18:25.912695+0300 || DEBUG || /админы --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T22:18:25.913730+0300 || ERROR || ERROR IN admins: /админы --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892
+can only join an iterable
+2023-11-27T22:37:01.788794+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T22:37:01.788794+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T22:37:01.788794+0300 || DEBUG || ---LOGED---
+2023-11-27T22:37:17.379359+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T22:37:18.610369+0300 || DEBUG || start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-27T22:37:29.358553+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (8248), thread 'MainThread' (14596):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 121, in <module>
+    client.run(input('token: '))
+    │      └ <function Client.run at 0x0000017A906193A0>
+    └ <discord.client.Client object at 0x0000017A8CF6D950>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x0000017A906EF420>
+    │       └ <function run at 0x0000017A8EEDAFC0>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x0000017A906DA020>
+           │      └ <function Runner.run at 0x0000017A8EF30A40>
+           └ <asyncio.runners.Runner object at 0x0000017A90709490>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x0000017A8EF2A520>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x0000017A90709490>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x0000017A8F04A520>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000017A8EF302C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000017A8EED4360>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1178781664462254242 channel=<TextChannel id=1167491479745343528 name='kkr_loot' position=3 nsfw=False news=False...
+          └ <function on_message at 0x0000017A906EEDE0>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 64, in on_message
+    await send_Embed(SCRIPTS[command](  log, language, conditions, GUILDS[guild_id], client  ))
+          │          │       │          │    │         │           │      │          └ <discord.client.Client object at 0x0000017A8CF6D950>
+          │          │       │          │    │         │           │      └ 1164886134137045022
+          │          │       │          │    │         │           └ {1164886134137045022: <guilds.Guilds object at 0x0000017A8FB6BD10>}
+          │          │       │          │    │         └ []
+          │          │       │          │    └ 'eng'
+          │          │       │          └ ('/admins', <Guild id=1164886134137045022 name='Тест' shard_id=0 chunked=False member_count=None>, 1164886134137045022, 'elis...
+          │          │       └ 'admins'
+          │          └ {'admins': <function admins at 0x0000017A906EE2A0>}
+          └ <function on_message.<locals>.send_Embed at 0x0000017A90A8A020>
+
+TypeError: admins() takes 4 positional arguments but 5 were given
+2023-11-27T22:41:49.667446+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T22:41:49.668446+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T22:41:49.668446+0300 || DEBUG || ---LOGED---
+2023-11-27T22:42:03.140439+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T22:42:04.097208+0300 || DEBUG || start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-27T22:42:08.422516+0300 || DEBUG || /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-27T22:42:08.423516+0300 || ERROR || ERROR IN admins: /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892
+'NoneType' object has no attribute 'admins'
+2023-11-27T22:45:55.331258+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T22:45:55.332257+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T22:45:55.332257+0300 || DEBUG || ---LOGED---
+2023-11-27T22:46:11.915309+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T22:46:12.657289+0300 || DEBUG || start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-27T22:46:16.200260+0300 || ERROR || ERROR IN admins: /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892
+'coroutine' object has no attribute 'admins'
+2023-11-27T22:48:55.725705+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T22:48:55.726705+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-27T22:48:55.726705+0300 || DEBUG || ---LOGED---
+2023-11-27T22:49:04.411829+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-27T22:49:06.229302+0300 || DEBUG || start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-27T22:49:14.604320+0300 || ERROR || ERROR IN admins: /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892
+'coroutine' object has no attribute 'admins'
+2023-11-28T23:50:26.415643+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-28T23:50:26.418643+0300 || DEBUG || ---LOGED---
+2023-11-28T23:51:28.854477+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-28T23:51:44.564398+0300 || DEBUG || start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (eng)
+2023-11-28T23:54:55.936431+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-28T23:54:55.937431+0300 || DEBUG || ---LOGED---
+2023-11-28T23:55:18.291008+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-28T23:55:21.254181+0300 || DEBUG || start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)
+2023-11-28T23:57:26.618174+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-28T23:57:26.620174+0300 || DEBUG || ---LOGED---
+2023-11-28T23:58:08.461429+0300 || DEBUG || NEW_GUILD --|-- Тест | 1164886134137045022 --> SUCCESS
+2023-11-28T23:58:09.500666+0300 || DEBUG || start_select_language --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS (ru)
+2023-11-29T00:04:30.838978+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T00:04:30.839979+0300 || DEBUG || ---LOGED---
+2023-11-29T00:05:21.041100+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T00:05:21.043100+0300 || DEBUG || ---LOGED---
+2023-11-29T00:07:26.460456+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T00:07:26.461456+0300 || DEBUG || ---LOGED---
+2023-11-29T00:07:29.888228+0300 || ERROR || ERROR IN admins: /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892
+sequence item 0: expected str instance, coroutine found
+2023-11-29T00:31:40.525096+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T00:31:40.527096+0300 || DEBUG || ---LOGED---
+2023-11-29T00:31:42.698585+0300 || ERROR || ERROR IN admins: /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892
+sequence item 0: expected str instance, coroutine found
+2023-11-29T00:38:13.667082+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T00:38:13.668081+0300 || DEBUG || ---LOGED---
+2023-11-29T00:38:19.080787+0300 || ERROR || ERROR IN admins: /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892
+sequence item 0: expected str instance, coroutine found
+2023-11-29T00:40:56.177212+0300 || ERROR || ERROR IN admins: /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892
+sequence item 0: expected str instance, coroutine found
+2023-11-29T00:41:46.084261+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T00:41:46.086262+0300 || DEBUG || ---LOGED---
+2023-11-29T00:41:51.637512+0300 || ERROR || ERROR IN admins: /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892
+sequence item 0: expected str instance, coroutine found
+2023-11-29T00:43:09.011873+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T00:43:09.013874+0300 || DEBUG || ---LOGED---
+2023-11-29T00:43:11.626462+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (5992), thread 'MainThread' (17816):
+Traceback (most recent call last):
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x0000020565DF2EF0, file "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\l...
+           └ <function _run_code at 0x0000020565FCA020>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x0000020565DF2EF0, file "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\l...
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher/../..\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+    │   └ <function main at 0x0000020568ABCFE0>
+    └ <module 'debugpy.server.cli' from 'c:\\Users\\kroto\\.vscode\\extensions\\ms-python.python-2023.20.0\\pythonFiles\\lib\\pytho...
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+    └ <function run_file at 0x0000020568ABCD60>
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ 'C:\\Users\\kroto\\OneDrive\\Документы\\Python\\KKR_loot\\main.py'
+    │     └ <function run_path at 0x00000205686E2A20>
+    └ <module '_pydevd_bundle.pydevd_runpy' from 'c:\\Users\\kroto\\.vscode\\extensions\\ms-python.python-2023.20.0\\pythonFiles\\l...
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x00000205683CA2C0, file "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 1>
+           └ <function _run_module_code at 0x00000205686E2660>
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': 'C:\\Users\\kr...
+    │         └ <code object <module> at 0x00000205683CA2C0, file "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 1>
+    └ <function _run_code at 0x00000205686E2200>
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': 'C:\\Users\\kr...
+         └ <code object <module> at 0x00000205683CA2C0, file "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 1>
+
+  File "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 124, in <module>
+    client.run(input('token: '))
+    │      └ <function Client.run at 0x0000020569EDA200>
+    └ <discord.client.Client object at 0x0000020568BA88D0>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x0000020569FB80E0>
+    │       └ <function run at 0x00000205695193A0>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x0000020569F4B2E0>
+           │      └ <function Runner.run at 0x0000020569519760>
+           └ <asyncio.runners.Runner object at 0x000002056992B490>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000002056950F060>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002056992B490>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002056959D6C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000020569518E00>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002056949C360>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1179175687668629646 channel=<TextChannel id=1167491479745343528 name='kkr_loot' position=3 nsfw=False news=False...
+          └ <function on_message at 0x0000020569F87B00>
+
+> File "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 73, in on_message
+    admins(log, language,
+    │      │    └ 'eng'
+    │      └ ('/admins', <Guild id=1164886134137045022 name='Тест' shard_id=0 chunked=False member_count=None>, 1164886134137045022, 'elis...
+    └ <function admins at 0x0000020569F86D40>
+
+  File "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\scripts.py", line 85, in admins
+    content = LANGUAGE[language]['admins_content'] + '\n'.join(admins)
+              │        │                                       └ [<coroutine object Client.fetch_user at 0x0000020569FC5460>]
+              │        └ 'eng'
+              └ {'eng': {'error_title': 'ERROR!', 'error_content': 'Unexpected error. The developer has already received a report about your ...
+
+TypeError: sequence item 0: expected str instance, coroutine found
+2023-11-29T00:53:00.891745+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T00:53:00.893744+0300 || DEBUG || ---LOGED---
+2023-11-29T00:55:25.960283+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T00:55:25.961283+0300 || DEBUG || ---LOGED---
+2023-11-29T00:55:30.299227+0300 || ERROR || An error has been caught in function 'on_message', process 'MainProcess' (2156), thread 'MainThread' (7544):
+Traceback (most recent call last):
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x0000020802752EF0, file "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\l...
+           └ <function _run_code at 0x000002080292A020>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x0000020802752EF0, file "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\l...
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher/../..\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+    │   └ <function main at 0x000002080543CFE0>
+    └ <module 'debugpy.server.cli' from 'c:\\Users\\kroto\\.vscode\\extensions\\ms-python.python-2023.20.0\\pythonFiles\\lib\\pytho...
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+    └ <function run_file at 0x000002080543CD60>
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ 'C:\\Users\\kroto\\OneDrive\\Документы\\Python\\KKR_loot\\main.py'
+    │     └ <function run_path at 0x0000020805062A20>
+    └ <module '_pydevd_bundle.pydevd_runpy' from 'c:\\Users\\kroto\\.vscode\\extensions\\ms-python.python-2023.20.0\\pythonFiles\\l...
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x0000020804D54600, file "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 1>
+           └ <function _run_module_code at 0x0000020805062660>
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': 'C:\\Users\\kr...
+    │         └ <code object <module> at 0x0000020804D54600, file "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 1>
+    └ <function _run_code at 0x0000020805062200>
+
+  File "c:\Users\kroto\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': 'C:\\Users\\kr...
+         └ <code object <module> at 0x0000020804D54600, file "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 1>
+
+  File "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 124, in <module>
+    client.run(input('token: '))
+    │      └ <function Client.run at 0x0000020806856200>
+    └ <discord.client.Client object at 0x000002080552CB50>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x00000208069340E0>
+    │       └ <function run at 0x0000020805E993A0>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x00000208068CB2E0>
+           │      └ <function Runner.run at 0x0000020805E99760>
+           └ <asyncio.runners.Runner object at 0x0000020806933F50>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x0000020805E93060>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x0000020806933F50>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x0000020805F1D6C0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000020805E98E00>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000020805E20360>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ (<Message id=1179178785346682933 channel=<TextChannel id=1167491479745343528 name='kkr_loot' position=3 nsfw=False news=False...
+          └ <function on_message at 0x0000020806907B00>
+
+> File "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 73, in on_message
+    admins(log, language,
+    │      │    └ 'eng'
+    │      └ ('/admins', <Guild id=1164886134137045022 name='Тест' shard_id=0 chunked=False member_count=None>, 1164886134137045022, 'elis...
+    └ <function admins at 0x0000020806906D40>
+
+  File "C:\Users\kroto\OneDrive\Документы\Python\KKR_loot\scripts.py", line 85, in admins
+    content = LANGUAGE[language]['admins_content'] + '\n'.join(admins)
+              │        │                                       └ [<User id=710395621688737892 name='elisey_iz_kkr' global_name='Elisey' bot=False>]
+              │        └ 'eng'
+              └ {'eng': {'error_title': 'ERROR!', 'error_content': 'Unexpected error. The developer has already received a report about your ...
+
+TypeError: sequence item 0: expected str instance, User found
+2023-11-29T00:56:44.379368+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T00:56:44.381369+0300 || DEBUG || ---LOGED---
+2023-11-29T00:58:39.440100+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T00:58:39.441100+0300 || DEBUG || ---LOGED---
+2023-11-29T18:48:10.159282+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T18:48:10.163283+0300 || DEBUG || ---LOGED---
+2023-11-29T18:48:28.854914+0300 || DEBUG || /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-29T18:49:45.026043+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T18:49:45.028044+0300 || DEBUG || ---LOGED---
+2023-11-29T18:49:53.325315+0300 || DEBUG || /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
+2023-11-29T18:51:22.383061+0300 || DEBUG || ---LANGUAGE_INITIALIZATION---
+2023-11-29T18:51:22.385062+0300 || DEBUG || ---LOGED---
+2023-11-29T18:51:26.285226+0300 || DEBUG || /admins --|-- Тест | 1164886134137045022 --|-- elisey_iz_kkr | 710395621688737892 --> SUCCESS
