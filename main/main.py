@@ -1,6 +1,7 @@
 import discord
 from scripts import *
 from guilds import *
+from db.db import *
 from loguru import logger
 
 intents = discord.Intents.all()
@@ -20,12 +21,13 @@ LOCALISITION = {'eng': '🇺🇲',
 ###
 GUILDS[1164886134137045022] = Guilds(1164886134137045022, [710395621688737892])
 GUILDS[1164886134137045022].guild_language = 'eng'
-
+###
 
 @client.event
 async def on_ready():
     global GUILDS, LOCALISITION, ID, COMMAND, OWNER, client
     COMMAND = language_initialization()
+    db_initialization()
     logged()
 
 
@@ -42,7 +44,6 @@ async def on_message(message):
         async def send_Embed(data_list):
             if len(data_list) == 4: 
                 owner = client.get_user(OWNER)
-                print(owner, OWNER)
                 await owner.send(data_list[3])
             await message.channel.send(embed = discord.Embed(
                 title=data_list[0],
@@ -53,9 +54,6 @@ async def on_message(message):
         command = list_message[0].lower()  # command in the original language
         list_message.pop(0)
 
-        try: conditions = list_message
-        except: conditions = None
-
         author_name = message.author.name
         author_id = message.author.id
         guild_id = message.guild.id
@@ -64,8 +62,7 @@ async def on_message(message):
                await client.fetch_guild(guild_id), guild_id,
                author_name, author_id)
 
-        command = COMMAND[GUILDS[guild_id].guild_language][command]
-        print(command)  # command in english
+        command = COMMAND[GUILDS[guild_id].guild_language][command] # command in english
         language = GUILDS[guild_id].guild_language
         
         match command:
@@ -82,7 +79,7 @@ async def on_message(message):
 @client.event
 async def on_raw_reaction_add(payload):
 
-    if (payload.user_id in GUILDS[payload.guild_id].admins   # Change language
+    if (payload.user_id in GUILDS[payload.guild_id].admins   # star_select_language
           and payload.user_id != ID
           and GUILDS[payload.guild_id].guild_language is None):
         
@@ -112,11 +109,7 @@ async def on_guild_join(guild):
         for lang in LOCALISITION: await msg.add_reaction(LOCALISITION[lang])
         new_guild_initialization(['NEW_GUILD', await client.fetch_guild(guild.id), guild.id])
         
-        
-
-@client.event
-async def path_settings(guild_id):
-    pass
+    
 
 
 

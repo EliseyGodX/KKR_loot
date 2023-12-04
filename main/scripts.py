@@ -2,7 +2,7 @@ from loguru import logger
 from guilds import *
 import json
 
-logger.add('debug.log', format='{time} || {level} || {message}', rotation='2 MB')
+logger.add('log/debug_scripts.log', format='{time} || {level} || {message}', rotation='2 MB')
 
 classes_emoji = {
            'dk': '<:dk:1164567710320050257>', 
@@ -17,7 +17,7 @@ classes_emoji = {
            'warrior': '<:warrior:1164567728993083422>'
            }
 
-_color_embed = {
+color_embed = {
             'success': 5763719,
             'error': 15548997,
             'important_change': 3426654
@@ -63,13 +63,14 @@ def language_initialization() -> dict:
 @logger.catch
 def logged() -> None:
     try:
-        if (isinstance(_color_embed['success'], int)  # checking for the correctness of colors for Embed
-            and isinstance(_color_embed['important_change'], int)
-            and isinstance(_color_embed['error'], int)):     logger.debug('---LOGED---')
+        if (isinstance(color_embed['success'], int)  # checking for the correctness of colors for Embed
+            and isinstance(color_embed['important_change'], int)
+            and isinstance(color_embed['error'], int)):     logger.debug('---LOGED---')
         else: raise IOError('bad color')
 
     except Exception as exc:
         logger.critical(f'CRITICAL ERROR IN logged: \n{exc}')
+        exit()
 
 
 
@@ -84,13 +85,13 @@ def admins(log: tuple, language: str, admins: dict) -> tuple:
         title = LANGUAGE[language]['admins_title']
         content = LANGUAGE[language]['admins_content'] + '\n' + '\n'.join(admins)
         logger.debug(f'{log[0]} --|-- {log[1]} | {log[2]} --|-- {log[3]} | {log[4]} --> SUCCESS')
-        return (title, content, _color_embed['success'])
+        return (title, content, color_embed['success'])
     
     except Exception as exc:
         logger.error(f'ERROR IN admins: {log[0]} --|-- {log[1]} | {log[2]} --|-- {log[3]} | {log[4]}\n{exc}')
         return (LANGUAGE[language]['error_title'],
                 LANGUAGE[language]['error_content'], 
-                _color_embed['error'], 
+                color_embed['error'], 
                 'ERROR -> admins')
 
 
@@ -112,12 +113,12 @@ def start_select_language(LOCALISITION: dict, emoji, log: tuple):
     if flag is False:
 
         logger.debug(f'{log[0]} --|-- {log[1]} | {log[2]} --|-- {log[3]} | {log[4]} --> FAIL (incorrect language)')
-        return None, {'title': 'ERROR!', 'description': 'incorrect language', 'colour': _color_embed['error']}
+        return None, {'title': 'ERROR!', 'description': 'incorrect language', 'colour': color_embed['error']}
 
     logger.debug(f'{log[0]} --|-- {log[1]} | {log[2]} --|-- {log[3]} | {log[4]} --> SUCCESS ({lang})')
     return lang, {'title': 'KKR_loot', 
-                  'description': LANGUAGE[lang]['Language changed successfully'], 
-                  'colour': _color_embed['important_change']}
+                  'description': LANGUAGE[lang]['start_select_language'], 
+                  'colour': color_embed['important_change']}
     
 
 

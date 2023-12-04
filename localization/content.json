@@ -6,7 +6,7 @@
         "admins_title": "admins",
         "admins_content": "Now they have administrator rights:",
 
-        "Language changed successfully": "Language changed successfully"
+        "start_select_language": "Language changed successfully"
         },
 
 
@@ -18,7 +18,7 @@
         "admins_title": "админы",
         "admins_content": "Сейчас обладают правами администратора:",
 
-        "Language changed successfully": "Язык успешно изменён"
+        "start_select_language": "Язык успешно изменён"
         }
 
 }
