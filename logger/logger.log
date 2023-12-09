@@ -1,5 +1,0 @@
-2023-12-10T00:36:52.088965+0300 || DEBUG || IN: ---db.WoW.Wowhead_wotlk_parser initialization---
-2023-12-10T00:36:55.484865+0300 || DEBUG || IN: discordModules.scripts---language initialization---
-2023-12-10T00:36:55.485865+0300 || DEBUG || IN: ---db.db initialization---
-2023-12-10T00:36:55.492898+0300 || DEBUG || IN: ---googleSheets.google_scriber initialization---
-2023-12-10T00:36:55.492898+0300 || DEBUG || IN: ---logged---
