@@ -1,10 +1,12 @@
 {
     "eng": {
-        "/admins": "admins"
+        "/admins": "admins",
+        "/link": "link"
     },
 
 
     "ru": {
-        "/админы": "admins"
+        "/админы": "admins",
+        "/привязать": "link"
     }
 }

@@ -1,8 +1,9 @@
 import discord
-from scripts import *
-from guilds import *
-from db.db import *
 from loguru import logger
+import db
+from discordModules import *
+import API
+
 
 intents = discord.Intents.all()
 intents.message_content = True
@@ -18,17 +19,21 @@ GUILDS = {}
 LOCALISITION = {'eng': '🇺🇲', 
                 'ru': '🇷🇺'}
 
+
 ###
 GUILDS[1164886134137045022] = Guilds(1164886134137045022, [710395621688737892])
 GUILDS[1164886134137045022].guild_language = 'eng'
 ###
 
+@logger.catch
 @client.event
 async def on_ready():
     global GUILDS, LOCALISITION, ID, COMMAND, OWNER, client
     COMMAND = language_initialization()
-    db_initialization()
+    db.db_initialization()
+    GS.googleSheets_initialization()
     logged()
+
 
 
 @logger.catch
@@ -41,7 +46,7 @@ async def on_message(message):
                     in COMMAND[(GUILDS[message.guild.id]).guild_language]  # existing command
         and GUILDS[message.guild.id].guild_language != None):
 
-        async def send_Embed(data_list):
+        async def send_Embed(data_list: tuple | list):
             if len(data_list) == 4: 
                 owner = client.get_user(OWNER)
                 await owner.send(data_list[3])
@@ -49,33 +54,41 @@ async def on_message(message):
                 title=data_list[0],
                 description=data_list[1],
                 colour=data_list[2]))
-        
-        list_message = message.content.split(' ')
-        command = list_message[0].lower()  # command in the original language
-        list_message.pop(0)
-
+            
         author_name = message.author.name
         author_id = message.author.id
         guild_id = message.guild.id
+        
+        list_message = message.content.split(' ')
+        command = list_message[0].lower()  # command in the original language
+        command = COMMAND[GUILDS[guild_id].guild_language][command] # command in english
+        list_message.pop(0)  # list_message = comditions (list)
+
 
         log = (command, 
                await client.fetch_guild(guild_id), guild_id,
                author_name, author_id)
 
-        command = COMMAND[GUILDS[guild_id].guild_language][command] # command in english
         language = GUILDS[guild_id].guild_language
         
         match command:
             case 'admins': await send_Embed(
                 admins(log, language, 
                        admins=[(await client.fetch_user(GUILDS[guild_id].admins[_])).name for _ in range(len(GUILDS[guild_id].admins))]))
-            
+            case 'link': 
+                if len(list_message) == 0: list_message.append('-')
+                embed, flag = link(log, language, list_message[0])
+                await send_Embed(embed)
+                if flag is True:
+                    GUILDS[guild_id].link = list_message[0]
+                    await send_Embed(link_second(language))
+
         
 
             
 
 
-
+@logger.catch
 @client.event
 async def on_raw_reaction_add(payload):
 
@@ -90,13 +103,25 @@ async def on_raw_reaction_add(payload):
         GUILDS[payload.guild_id].guild_language, dict_embed = start_select_language(
             LOCALISITION, payload.emoji, log)
         
-        await client.get_channel(payload.channel_id).send(embed = discord.Embed(
+        channel = client.get_channel(payload.channel_id)
+        
+        await channel.send(embed = discord.Embed(
                 title=dict_embed['title'],
                 description=dict_embed['description'],
                 colour=dict_embed['colour']))
         
+        second_message = start_select_language_second(GUILDS[payload.guild_id].guild_language)
+
+        await channel.send(embed = discord.Embed(
+                title=second_message['title'],
+                description=second_message['description'],
+                colour=second_message['colour']))
+        
+
+        
 
 
+@logger.catch
 @client.event
 async def on_guild_join(guild):
     kkr_loot = discord.utils.get(guild.channels, name='kkr_loot')
@@ -114,4 +139,4 @@ async def on_guild_join(guild):
 
 
 if __name__ == "__main__":
-    client.run(input('token: '))
+    client.run(API.DISCORD_TOKEN)

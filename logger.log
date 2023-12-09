@@ -1,0 +1,118 @@
+2023-12-09T21:19:08.994100+0300 || DEBUG || ---language_initialization---
+2023-12-09T21:19:08.995100+0300 || DEBUG || ---db_initialization---
+2023-12-09T21:19:09.001102+0300 || DEBUG || ---googleSheets_initialization---
+2023-12-09T21:19:09.002102+0300 || DEBUG || ---logged---
+2023-12-09T21:51:06.184610+0300 || DEBUG || IN: discordModules.scripts---language initialization---
+2023-12-09T21:51:06.185610+0300 || DEBUG || IN: ---db.db initialization---
+2023-12-09T21:51:06.192902+0300 || DEBUG || IN: ---googleSheets.google_scriber initialization---
+2023-12-09T21:51:06.192902+0300 || DEBUG || IN: ---logged---
+2023-12-09T21:56:33.633210+0300 || DEBUG || IN: discordModules.scripts---language initialization---
+2023-12-09T21:56:34.071427+0300 || ERROR || IN: db.WoW.Wowhead_wotlk_parser efficiency (WoWHead) != True
+2023-12-09T21:56:34.071427+0300 || DEBUG || IN: ---db.db initialization---
+2023-12-09T21:56:34.078428+0300 || DEBUG || IN: ---googleSheets.google_scriber initialization---
+2023-12-09T21:56:34.079429+0300 || DEBUG || IN: ---logged---
+2023-12-09T21:57:17.807312+0300 || DEBUG || IN: discordModules.scripts---language initialization---
+2023-12-09T21:57:18.102452+0300 || ERROR || IN: db.WoW.Wowhead_wotlk_parser efficiency (WoWHead) != True
+2023-12-09T21:57:18.102452+0300 || DEBUG || IN: ---db.db initialization---
+2023-12-09T21:57:18.109454+0300 || DEBUG || IN: ---googleSheets.google_scriber initialization---
+2023-12-09T21:57:18.109454+0300 || DEBUG || IN: ---logged---
+2023-12-09T21:57:58.503425+0300 || DEBUG || IN: discordModules.scripts---language initialization---
+2023-12-09T21:57:58.698776+0300 || ERROR || IN: An error has been caught in function 'wowhead_wotlk_parser_initialization', process 'MainProcess' (17692), thread 'MainThread' (5528):
+Traceback (most recent call last):
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 142, in <module>
+    client.run(API.DISCORD_TOKEN)
+    │      │   │   └ 'MTEyMTUxMTYzMjAxOTkyMzA3Ng.GwT6Jr.uv0mTRUSFDeKY8DWJHg0ya57kEqu9OAf9dOoJY'
+    │      │   └ <module 'API' from 'c:\\Users\\kroto\\OneDrive\\Документы\\Python\\KKR_loot\\API\\__init__.py'>
+    │      └ <function Client.run at 0x000001C40B4DD4E0>
+    └ <discord.client.Client object at 0x000001C407E8D250>
+
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+    │       │   └ <function Client.run.<locals>.runner at 0x000001C40BEF54E0>
+    │       └ <function run at 0x000001C409D9B1A0>
+    └ <module 'asyncio' from 'C:\\Users\\kroto\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Client.run.<locals>.runner at 0x000001C40BEE45E0>
+           │      └ <function Runner.run at 0x000001C409DF4C20>
+           └ <asyncio.runners.Runner object at 0x000001C40BEF2390>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Client.run.<locals>.runner() running at C:\Users\kroto\AppData\Local\Programs\Python\Python...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001C409DF2700>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001C40BEF2390>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001C40A30A700>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001C409DF44A0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001C409D94540>
+    └ <Handle <TaskStepMethWrapper object at 0x000001C40BEDE410>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000001C40BEDE410>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000001C40BEDE410>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000001C40BEDE410>()>
+  File "C:\Users\kroto\AppData\Local\Programs\Python\Python311\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          │     │       └ {}
+          │     └ ()
+          └ <function on_ready at 0x000001C40BED9C60>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\main.py", line 33, in on_ready
+    db.db_initialization()
+    │  └ <function db_initialization at 0x000001C40B5B5080>
+    └ <module 'db' from 'c:\\Users\\kroto\\OneDrive\\Документы\\Python\\KKR_loot\\db\\__init__.py'>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\db\db.py", line 14, in db_initialization
+    WoW.wowhead_wotlk_parser_initialization()
+    │   └ <function wowhead_wotlk_parser_initialization at 0x000001C40B818A40>
+    └ <module 'db.WoW' from 'c:\\Users\\kroto\\OneDrive\\Документы\\Python\\KKR_loot\\db\\WoW\\__init__.py'>
+
+> File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\db\WoW\wowhead_wotlk_parser.py", line 14, in wowhead_wotlk_parser_initialization
+    if parse_xml(6948)[0] == 'Hearthstone':
+       └ <function parse_xml at 0x000001C40B84E340>
+
+  File "c:\Users\kroto\OneDrive\Документы\Python\KKR_loot\db\WoW\wowhead_wotlk_parser.py", line 39, in parse_xml
+    slot = tree.find(".//inventorySlot").text.strip()
+           │    └ <function ElementTree.find at 0x000001C40B81B560>
+           └ <xml.etree.ElementTree.ElementTree object at 0x000001C40BF18410>
+
+AttributeError: 'NoneType' object has no attribute 'strip'
+2023-12-09T21:57:58.729856+0300 || ERROR || IN: db.WoW.Wowhead_wotlk_parser CRITICAL ERROR IN initialization: 
+'NoneType' object is not subscriptable
+2023-12-09T21:57:58.730857+0300 || DEBUG || IN: ---db.db initialization---
+2023-12-09T21:57:58.737859+0300 || DEBUG || IN: ---googleSheets.google_scriber initialization---
+2023-12-09T21:57:58.737859+0300 || DEBUG || IN: ---logged---
+2023-12-09T22:01:35.734889+0300 || DEBUG || IN: discordModules.scripts---language initialization---
+2023-12-09T22:01:36.152247+0300 || ERROR || IN: db.WoW.Wowhead_wotlk_parser efficiency (WoWHead) != True
+2023-12-09T22:01:36.152247+0300 || DEBUG || IN: ---db.db initialization---
+2023-12-09T22:01:36.160248+0300 || DEBUG || IN: ---googleSheets.google_scriber initialization---
+2023-12-09T22:01:36.160248+0300 || DEBUG || IN: ---logged---
+2023-12-09T22:02:49.081597+0300 || DEBUG || IN: discordModules.scripts---language initialization---
+2023-12-09T22:02:49.214132+0300 || ERROR || IN: db.WoW.Wowhead_wotlk_parser efficiency (WoWHead) != True
+2023-12-09T22:02:49.215131+0300 || DEBUG || IN: ---db.db initialization---
+2023-12-09T22:02:49.222133+0300 || DEBUG || IN: ---googleSheets.google_scriber initialization---
+2023-12-09T22:02:49.223134+0300 || DEBUG || IN: ---logged---
+2023-12-09T22:03:10.913732+0300 || DEBUG || IN: discordModules.scripts---language initialization---
+2023-12-09T22:03:11.037267+0300 || ERROR || IN: db.WoW.Wowhead_wotlk_parser efficiency (WoWHead) != True
+2023-12-09T22:03:11.038267+0300 || DEBUG || IN: ---db.db initialization---
+2023-12-09T22:03:11.045269+0300 || DEBUG || IN: ---googleSheets.google_scriber initialization---
+2023-12-09T22:03:11.046269+0300 || DEBUG || IN: ---logged---
+2023-12-09T22:05:52.697037+0300 || DEBUG || IN: discordModules.scripts---language initialization---
+2023-12-09T22:05:52.897242+0300 || DEBUG || IN: ---db.WoW.Wowhead_wotlk_parser initialization---
+2023-12-09T22:05:52.897242+0300 || DEBUG || IN: ---db.db initialization---
+2023-12-09T22:05:52.905244+0300 || DEBUG || IN: ---googleSheets.google_scriber initialization---
+2023-12-09T22:05:52.905244+0300 || DEBUG || IN: ---logged---

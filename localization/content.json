@@ -3,10 +3,22 @@
         "error_title": "ERROR!",
         "error_content": "Unexpected error. The developer has already received a report about your problem",
 
+
+
         "admins_title": "admins",
         "admins_content": "Now they have administrator rights:",
 
-        "start_select_language": "Language changed successfully"
+        "link_bad_content": "Invalid ID.\nYou may have forgotten to rename the sheet in the table to 'KKR_loot' or grant access rights as an editor to the service account of the bot: kkr-loot@kkr-loot-407512.iam.gserviceaccount.com",
+        "link_title": "link",
+        "link_content": "Successfully changed",
+
+        "link_second_title": "Specify the coordinates!",
+        "link_second_content": "Specify the configuration using the /coordinate <x,y,direction> command, where x is the horizontal offset of the queue relative to the id, and y is vertical. direction - the direction of queue growth (h - from left to right, v - from top to bottom)",
+
+
+
+        "start_select_language": "Language changed successfully",
+        "start_select_language_second": "You need to link the table to your server.\nTo do this, copy the ID from the address bar and use the command /link <ID>"
         },
 
 
@@ -15,10 +27,23 @@
         "error_title": "ОШИБКА!",
         "error_content": "Непредвиденная ошибка. Разработчик уже получил отчёт о вашей проблеме",
 
+
+
         "admins_title": "админы",
         "admins_content": "Сейчас обладают правами администратора:",
 
-        "start_select_language": "Язык успешно изменён"
+        "link_bad_content": "Неверное ID.\nВозможно, вы забыли переименовать лист в таблице  на 'KKR_loot' или выдать права доступа в качестве редактора сервисному аккаунта бота:  kkr-loot@kkr-loot-407512.iam.gserviceaccount.com",
+        "link_title": "Привязка",
+        "link_content": "Успешно изменено",
+        
+
+        "link_second_title": "Укажите координаты!",
+        "link_second_content": "Укажите конфигурацию, используя команду /coordinate <x,y,direction>, где x - смещение очереди относительно id по горизонтали, а y - по вертикали. direction - направление роста очереди (h - слева направо, v - сверху вниз)",
+
+
+
+        "start_select_language": "Язык успешно изменён",
+        "start_select_language_second": "Вам нужно привязать таблицу к вашему серверу.\nЧтобы это сделать, скопируйте из адресной строки идентификатор и используйте команду /привязать <идентификатор>"
         }
 
 }

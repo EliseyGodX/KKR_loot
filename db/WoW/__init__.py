@@ -1,0 +1,1 @@
+from db.WoW.wowhead_wotlk_parser import *
