@@ -11,8 +11,6 @@ def db_initialization() -> None:
         db = sqlite3.connect('db/items.db')
         cursor = db.cursor()
 
-        WoW.wowhead_wotlk_parser_initialization()
-
         logger.debug(f'---{P} initialization---')
     except Exception as exc:
         logger.critical(f'{P} CRITICAL ERROR IN db_initialization: \n{exc}')
