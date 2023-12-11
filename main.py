@@ -1,8 +1,9 @@
 import discord
 from loguru import logger
-import db
+import DB
 from discordModules import *
 import API
+from Project.root import project
 
 
 intents = discord.Intents.all()
@@ -16,7 +17,7 @@ startswith = '/'
 
 GUILDS = {}
 
-LOCALISITION = {'eng': '🇺🇲', 
+langInEmoji = {'eng': '🇺🇲', 
                 'ru': '🇷🇺'}
 
 
@@ -28,9 +29,8 @@ GUILDS[1164886134137045022].guild_language = 'eng'
 @logger.catch
 @client.event
 async def on_ready():
-    global GUILDS, LOCALISITION, ID, COMMAND, OWNER, client
+    global GUILDS, langInEmoji, ID, COMMAND, OWNER, client
     COMMAND = language_initialization()
-    db.db_initialization()
     GS.googleSheets_initialization()
     logged()
 
@@ -63,6 +63,7 @@ async def on_message(message):
         command = list_message[0].lower()  # command in the original language
         command = COMMAND[GUILDS[guild_id].guild_language][command] # command in english
         list_message.pop(0)  # list_message = comditions (list)
+        if len(list_message) == 0: list_message.append('-')
 
 
         log = (command, 
@@ -76,7 +77,6 @@ async def on_message(message):
                 admins(log, language, 
                        admins=[(await client.fetch_user(GUILDS[guild_id].admins[_])).name for _ in range(len(GUILDS[guild_id].admins))]))
             case 'link': 
-                if len(list_message) == 0: list_message.append('-')
                 embed, flag = link(log, language, list_message[0])
                 await send_Embed(embed)
                 if flag is True:
@@ -91,17 +91,18 @@ async def on_message(message):
 @logger.catch
 @client.event
 async def on_raw_reaction_add(payload):
+    lang = GUILDS[payload.guild_id].guild_language
 
     if (payload.user_id in GUILDS[payload.guild_id].admins   # star_select_language
           and payload.user_id != ID
-          and GUILDS[payload.guild_id].guild_language is None):
+          and lang is None):
         
         log = ('start_select_language', 
                await client.fetch_guild(payload.guild_id), payload.guild_id, 
                await client.fetch_user(payload.user_id), payload.user_id)
         
-        GUILDS[payload.guild_id].guild_language, dict_embed = start_select_language(
-            LOCALISITION, payload.emoji, log)
+        lang, dict_embed = start_select_language(
+            langInEmoji, payload.emoji, log)
         
         channel = client.get_channel(payload.channel_id)
         
@@ -110,12 +111,13 @@ async def on_raw_reaction_add(payload):
                 description=dict_embed['description'],
                 colour=dict_embed['colour']))
         
-        second_message = start_select_language_second(GUILDS[payload.guild_id].guild_language)
+        if lang is not None:
+            second_message = start_select_language_second(lang)
 
-        await channel.send(embed = discord.Embed(
-                title=second_message['title'],
-                description=second_message['description'],
-                colour=second_message['colour']))
+            await channel.send(embed = discord.Embed(
+                    title=second_message['title'],
+                    description=second_message['description'],
+                    colour=second_message['colour']))
         
 
         
@@ -131,7 +133,7 @@ async def on_guild_join(guild):
                 description='Please select the language below',
                 colour=1752220))
         GUILDS[guild.id] = Guilds(guild.id, [guild.owner_id])
-        for lang in LOCALISITION: await msg.add_reaction(LOCALISITION[lang])
+        for lang in langInEmoji: await msg.add_reaction(langInEmoji[lang])
         new_guild_initialization(['NEW_GUILD', await client.fetch_guild(guild.id), guild.id])
         
     

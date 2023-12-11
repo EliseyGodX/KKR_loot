@@ -1,7 +1,6 @@
 import httplib2
 from googleapiclient import discovery
 from oauth2client.service_account import ServiceAccountCredentials
-from db import db
 from logger import logger
 
 

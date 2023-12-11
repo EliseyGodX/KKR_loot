@@ -1,5 +1,5 @@
 import googleSheets as GS
-import db
+import DB
 import json
 from logger import logger
 
@@ -53,7 +53,7 @@ def language_initialization() -> dict:
         with open('localization/command.json', encoding='utf-8') as f:
             COMMAND = json.load(f)
 
-        logger.debug(f'{P}---language initialization---')
+        logger.debug(f'{P}: ---language initialization---')
         return COMMAND
     
     except Exception as exc:
