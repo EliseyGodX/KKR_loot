@@ -1,5 +1,5 @@
 from Project.WoW.setup import wow_bd
 
-project = {
+root = {
     'WoW': wow_bd
 }

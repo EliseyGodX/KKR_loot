@@ -7,7 +7,6 @@ P = 'db.WoW.WoWHead.{}'
 
 class WoWHead:
 
-    @logger.catch
     def __init__(self, addon: str, test: list) -> None:
         self.efficiency = True  # for test
         self.addon = addon
@@ -15,7 +14,7 @@ class WoWHead:
         try:  # chek for WoWHead
             if parse_xml(id_=test[0], lang='eng',
                             efficiency=self.efficiency,
-                            addon=self.addon)[1] == 'Hearthstone': 
+                            addon=self.addon)[2] == 'Hearthstone': 
                 logger.debug(f'---{P.format(self.addon)} initialization---')
             
             else:  # if WoWHead is broken
@@ -26,8 +25,9 @@ class WoWHead:
             self.efficiency = False
             logger.error(f'{P.format(self.addon)} CRITICAL ERROR IN initialization: \n{exc}')
 
-    
 
+    
+    @logger.catch
     def parse(self, id_, lang) -> tuple:
         return parse_xml(id_=id_, lang=lang, 
                          efficiency=self.efficiency,
@@ -54,6 +54,7 @@ def parse_xml(id_: int, lang: str, efficiency: bool, addon: str) -> tuple | None
     name = tree.find(".//name").text.strip()
     ilvl = tree.find(".//level").text.strip()
     try: slot = tree.find(".//inventorySlot").text.strip()
-    except: slot = None
+    except: slot = 'None'
+    if lang == '': lang = 'eng'
 
-    return (str(id_), str(name), str(ilvl), str(slot))
+    return (id_, lang, name, ilvl, slot)

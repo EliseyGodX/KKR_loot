@@ -23,20 +23,7 @@ color_embed = {
             'success': 5763719,
             'error': 15548997,
             'important_change': 3426654
-
 }
-
-
-def open_json(file: str) -> dict:                              #
-    with open(file + '.json', encoding='utf-8') as f:          #
-        DICT = json.load(f)                                    # open
-    return DICT                                                # and
-                                                               # close
-def close_json(file: str, DICT: dict) -> None:                 # json
-    with open(file + '.json', 'w', encoding='utf-8') as f:     #
-        json.dump(DICT, f, indent=3, ensure_ascii=False)       #
-
-
 
 
 
@@ -44,12 +31,12 @@ def close_json(file: str, DICT: dict) -> None:                 # json
 
 # scripts for on_ready
 
-@logger.catch
 def language_initialization() -> dict:
     global LANGUAGE
 
     try:
-        LANGUAGE = open_json('localization/content')
+        with open('localization/content.json', encoding='utf-8') as f:
+            LANGUAGE = json.load(f)
         with open('localization/command.json', encoding='utf-8') as f:
             COMMAND = json.load(f)
 
@@ -62,7 +49,6 @@ def language_initialization() -> dict:
 
 
 
-@logger.catch
 def logged() -> None:
     try:
         if (isinstance(color_embed['success'], int)  # checking for the correctness of colors for Embed
@@ -81,7 +67,6 @@ def logged() -> None:
 
 # scripts for on_message
 
-@logger.catch
 def admins(log: tuple, lang: str, admins: dict) -> tuple:
     try:
         title = LANGUAGE[lang]['admins_title']
@@ -98,7 +83,6 @@ def admins(log: tuple, lang: str, admins: dict) -> tuple:
 
 
 
-@logger.catch
 def link(log: tuple, lang: str, sheet_id: str) -> tuple:
     try:
         sheet_id = GS.trial_for_link(sheet_id)
@@ -125,7 +109,6 @@ def link(log: tuple, lang: str, sheet_id: str) -> tuple:
 
 
 
-@logger.catch
 def link_second(lang: str) -> tuple:
     try:
         title = LANGUAGE[lang]['link_second_title']
@@ -145,7 +128,6 @@ def link_second(lang: str) -> tuple:
 
 # scripts for on_raw_reaction_add
 
-@logger.catch
 def start_select_language(LOCALISITION: dict, emoji, log: tuple) -> dict:
     flag = False
 
@@ -166,7 +148,6 @@ def start_select_language(LOCALISITION: dict, emoji, log: tuple) -> dict:
     
 
 
-@logger.catch
 def start_select_language_second(lang: str, log: tuple) -> dict:
     try:
         title = 'KKR_loot'
@@ -187,7 +168,6 @@ def start_select_language_second(lang: str, log: tuple) -> dict:
 
 # scripts for on_guild_join
 
-@logger.catch
 def new_guild_initialization(log) -> None: 
     logger.debug(f'{P} {log[0]} --|-- {log[1]} | {log[2]} --> SUCCESS')
 

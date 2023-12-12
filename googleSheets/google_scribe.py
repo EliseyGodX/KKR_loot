@@ -11,7 +11,6 @@ P = 'googleSheets.google_scriber'
 
 # result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID, range=SHEET).execute()
 # values = result.get('values', [])
-@logger.catch
 def googleSheets_initialization() -> None:
     global KEY_FILE, SHEET, creds, service
     
@@ -27,7 +26,6 @@ def googleSheets_initialization() -> None:
         exit()
 
 
-@logger.catch
 def trial_for_link(trial_link: str) -> bool:
     try: 
         service.spreadsheets().get(spreadsheetId=trial_link).execute()

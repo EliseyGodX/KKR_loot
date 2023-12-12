@@ -1,3 +1,3 @@
 from DB.db import DB
 
-WoW_db = DB('WoW', ('id', 'name', 'ilvl', 'slot'))
+WoW_wotlk_db = DB('WoW', 'wotlk', ('id', 'lang', 'name', 'ilvl', 'slot'))
