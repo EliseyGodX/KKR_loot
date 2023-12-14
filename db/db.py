@@ -1,6 +1,7 @@
 import sqlite3
 from logger import logger
 import Project
+from fuzzywuzzy import process
 
 P = 'DB.db.{}'
 
@@ -27,7 +28,7 @@ class DB:
 
 
 
-    def item(self, id_: int, lang: str, addon: Project) -> tuple:
+    def item_by_id(self, id_: int, lang: str, addon: Project) -> tuple:
         self.cursor.execute(f'''SELECT * FROM {self.addon} 
                             WHERE id = (?) AND lang = ?''', (id_, lang, ))
         result = self.cursor.fetchone()
@@ -39,6 +40,27 @@ class DB:
                     f'''INSERT INTO {self.addon} ({', '.join(self.fields)}) 
                     VALUES ({', '.join(['?' for _ in self.fields])})''', result)
                 self.db.commit()
+                logger.debug(f'{P.format(self.project)} new item ({lang}) - {id_}')
 
         return result
+    
+
+
+    def item_by_name(self, name: str, items: str) -> tuple:
+        item = process.extractOne(name, items)
+        return self.cursor.execute(f'''SELECT * FROM {self.addon} 
+                                   WHERE name = (?)''', (item[0],)).fetchall()
+        
+
+
+    def new_item(self, id_: int, lang: str, addon: Project) -> None:
+        if self.cursor.execute(f'''SELECT * FROM {self.addon} 
+                            WHERE id = (?) AND lang = ?''', 
+                            (id_, lang, )).fetchall() is None:
+            self.cursor.execute(
+                    f'''INSERT INTO {self.addon} ({', '.join(self.fields)}) 
+                    VALUES ({', '.join(['?' for _ in self.fields])})''', 
+                    addon.parse(id_=id_, lang=lang))
+            self.db.commit()
+            
         

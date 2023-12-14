@@ -9,8 +9,6 @@ SHEET = 'KKR_loot'
 P = 'googleSheets.google_scriber'
 
 
-# result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID, range=SHEET).execute()
-# values = result.get('values', [])
 def googleSheets_initialization() -> None:
     global KEY_FILE, SHEET, creds, service
     
@@ -32,5 +30,30 @@ def trial_for_link(trial_link: str) -> bool:
         return True
     except: 
         return False
-        
+    
 
+@logger.catch
+def sheet_parser(link: str, x: int, y: int, 
+                 orient: str, range_: int) -> dict:
+    try:
+        result = service.spreadsheets().values().get(spreadsheetId=link, range=SHEET).execute()
+        values = result.get('values', [])
+    except Exception as exc:
+        logger.error(f'{P} in sheet_parser {link}')
+        return False  # Error
+    for _ in values: print(len(_), _)
+    loot_que = {}
+    for i in range(len(values)):
+        for j in range(len(values[i])):
+            if values[i][j].startswith('id='):
+                key = values[i][j].split('=')[1]
+                queue = []
+                having = []
+                if orient == '|':
+                    for slot in range(range_):
+                        try: queue.append(values[i+y+slot][j+x])
+                        except: queue.append('')
+                        try: having.append(values[i+y+slot][j+x+1])
+                        except: having.append('')
+                loot_que[int(key)] = {'queue': queue, 'having': having}
+    return loot_que
