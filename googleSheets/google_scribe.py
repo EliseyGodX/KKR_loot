@@ -27,12 +27,13 @@ def googleSheets_initialization() -> None:
 def trial_for_link(trial_link: str) -> bool:
     try: 
         service.spreadsheets().get(spreadsheetId=trial_link).execute()
+        logger.debug(f'{P} test link (succes) - {trial_link}')
         return True
     except: 
         return False
     
 
-@logger.catch
+
 def sheet_parser(link: str, x: int, y: int, 
                  orient: str, range_: int) -> dict:
     try:
@@ -41,7 +42,7 @@ def sheet_parser(link: str, x: int, y: int,
     except Exception as exc:
         logger.error(f'{P} in sheet_parser {link}')
         return False  # Error
-    for _ in values: print(len(_), _)
+    
     loot_que = {}
     for i in range(len(values)):
         for j in range(len(values[i])):
@@ -57,3 +58,52 @@ def sheet_parser(link: str, x: int, y: int,
                         except: having.append('')
                 loot_que[int(key)] = {'queue': queue, 'having': having}
     return loot_que
+
+
+
+def writing_to_the_sheet(link: str, data: dict, x: int, y: int, 
+                  orient: str, range_: int) -> bool:
+    sheet = service.spreadsheets().values().get(spreadsheetId=link, 
+                                                range=SHEET).execute().get('values', [])
+    execute_data = []
+    if orient =='|':
+        for i in range(len(sheet)):  # y
+            for j in range(len(sheet[i])):  # x
+                if sheet[i][j].startswith('id='):
+                    key = int(sheet[i][j].split('=')[1])
+                    execute_range = f'{convert_coord([j+x+1, i+y+1])}:{convert_coord([j+x+2, i+y+range_+1])}'
+                    values = []
+                    for indx in range(range_):
+                        values.append([data[key]['queue'][indx],
+                                       data[key]['having'][indx]])
+
+                    execute_data.append({
+                        "range": f"{SHEET}!{execute_range}",
+                        "majorDimension": "ROWS",     
+                        "values": values          
+                    })
+
+
+    service.spreadsheets().values().batchUpdate(spreadsheetId = link, body = {
+    "valueInputOption": "USER_ENTERED",
+    "data": execute_data
+    }).execute()
+    
+    
+
+
+
+
+def convert_coord(coord: list | tuple) -> str:
+    column_index = ''
+    row_index = ''
+    if coord[0] <= 26:
+        column_index = chr(ord('A') + coord[0] - 1)
+    else:
+        first_letter_index = (coord[0] - 1) // 26
+        second_letter_index = (coord[0] - 1) % 26 + 1
+        column_index += chr(ord('A') + first_letter_index - 1) + chr(ord('A') + second_letter_index - 1)
+    row_index = str(coord[1])
+    return column_index + row_index
+
+
