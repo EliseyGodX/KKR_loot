@@ -3,7 +3,7 @@ from loguru import logger
 import DB
 from discordModules import *
 import API
-from Project.root import project
+from Project.root import root
 
 
 intents = discord.Intents.all()
@@ -119,6 +119,7 @@ async def on_raw_reaction_add(payload):
                     description=second_message['description'],
                     colour=second_message['colour']))
         
+
 
         
 

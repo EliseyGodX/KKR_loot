@@ -10,6 +10,7 @@ class Guilds:
                  orient: None | str = None,
                  range_: None | int = None,
                  sheet: None | dict = None,
+                 class_color: None | dict = None,
                  project: None | str = None,
                  service: None | str = None,
                  addon: Project = None,
@@ -24,6 +25,7 @@ class Guilds:
         self.orient = orient
         self.range_ = range_
         self.sheet = sheet
+        self.class_color = class_color
         
         self.project = project
         self.service = service

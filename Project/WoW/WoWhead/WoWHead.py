@@ -57,4 +57,4 @@ def parse_xml(id_: int, lang: str, efficiency: bool, addon: str) -> tuple | None
     except: slot = 'None'
     if lang == '': lang = 'eng'
 
-    return (id_, lang, name, ilvl, slot)
+    return (id_, lang, name.lower(), ilvl, slot)

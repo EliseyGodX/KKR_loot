@@ -1,6 +1,8 @@
 from Project.WoW.WoWhead.setup import WoWHead_addons 
 
 bd_list = ['WoWHead']
+wotlk_classes = ['dk', 'druid', 'hunter', 'mage', 'paladin', 
+                 'priest', 'rogue', 'shaman', 'warlock', 'warrior']
 
 def init_bd(bd_list: list, addons: dict) -> dict:
     bd = {}
@@ -13,4 +15,5 @@ def init_bd(bd_list: list, addons: dict) -> dict:
 
     return bd
 
-wow_bd = init_bd(bd_list, WoWHead_addons)
+wow_bd = init_bd(bd_list, WoWHead_addons) | {'classes': {'wotlk_classes': wotlk_classes
+                                                         }}
