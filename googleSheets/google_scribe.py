@@ -13,7 +13,6 @@ P = 'googleSheets.google_scriber'
 class GoogleScriber:
     
     def __init__(self) -> None:
-        
         try:
             creds_for_service = ServiceAccountCredentials.from_json_keyfile_name(KEY_FILE, 
                                         ['https://www.googleapis.com/auth/spreadsheets'])
@@ -36,9 +35,8 @@ class GoogleScriber:
             return False
         
 
-    @logger.catch
     def sheet_parser(self, link: str, x: int, y: int, 
-                    orient: str, range_: int) -> dict:
+                    orient: str, range_: int, classes_count: int) -> dict and dict and dict:
         try:
             result = self.service.spreadsheets().values().get(spreadsheetId=link, range=SHEET).execute()
             values = result.get('values', [])
@@ -56,82 +54,154 @@ class GoogleScriber:
                         key = values[i][j].split('=')[1]
                         queue = []
                         having = []
-                        coord[int(key)] = {'queue': [], 'having': []}
+                        coord[int(key)] = []
                         for slot in range(range_):
                             try: queue.append(values[i+y+slot][j+x])
                             except: queue.append('')
                             try: having.append(values[i+y+slot][j+x+1])
                             except: having.append('')
-                            coord[int(key)]['queue'].append([j+x+1, i+y+slot+1])
-                            coord[int(key)]['having'].append([j+x+1+1, i+y+slot+1])
+                            if slot == 0:
+                                coord[int(key)].append([j+x+1, i+y+slot+1])
+                            elif slot == range_-1:    
+                                coord[int(key)].append([j+x+1+1, i+y+slot+1])
                         loot_que[int(key)] = {'queue': queue, 'having': having}
 
-        range_colors = []
-        for item in coord:
-            range_colors.append(SHEET + '!' + convert_coord((coord[item]['queue'][0])) + 
-                                ':' + convert_coord((coord[item]['having'][range_-1])))
+            range_colors = []
+            for item in coord:
+                range_colors.append(SHEET + '!' + convert_coord((coord[item][0])) + 
+                                    ':' + convert_coord((coord[item][1])))
 
-        request = self.service.spreadsheets().get(spreadsheetId=link, 
-                                                  ranges=range_colors, 
-                                                  fields='sheets.data.rowData.values.effectiveFormat.backgroundColor', 
-                                                  includeGridData=True).execute()
-        color = {}
-        i = 0
-        for item in coord:
-            color[item] = {'queue': [], 'having': []}
-            item_cells = request['sheets'][0]['data'][i]['rowData']
-            for row in range(len(item_cells)):
-                color[item]['queue'].append(item_cells[row]['values'][0]['effectiveFormat']['backgroundColor'])
-                color[item]['having'].append(item_cells[row]['values'][1]['effectiveFormat']['backgroundColor'])
-            i += 1
-
-        return coord, color
-
-
-
-    def writing_to_the_sheet(self, link: str, data: dict, x: int, y: int, 
-                    orient: str, range_: int) -> bool | str:
-        sheet = self.service.spreadsheets().values().get(spreadsheetId=link, 
-                                                    range=SHEET).execute().get('values', [])
-        execute_data = []
-        
-        if orient =='|':
-            for i in range(len(sheet)):  # y
-                for j in range(len(sheet[i])):  # x
-                    if sheet[i][j].startswith('id='):
-                        key = int(sheet[i][j].split('=')[1])
-                        execute_range = f'{convert_coord([j+x, i+y+1])}:{convert_coord([j+x+2, i+y+range_+1])}'
-                        values = []
-                        for indx in range(range_):
-                            values.append([data[key]['queue'][indx],
-                                        data[key]['having'][indx]])
-
-                        execute_data.append({
-                            "range": f"{SHEET}!{execute_range}",
-                            "majorDimension": "ROWS",     
-                            "values": values          
-                        })
-        try:               
-            self.service.spreadsheets().values().batchUpdate(spreadsheetId = link, body = {
-            "valueInputOption": "USER_ENTERED",
-            "data": execute_data
-            }).execute()
-            logger.debug(f'{P} writing_to_the_sheet (succes) - {link}')
-        except HttpError as error:
-            error = error.content.decode("utf-8")
-            return eval(error)['error']['message']
-        else: return True
-        
-
-
-    def class_colour(self, link: str, count: int) -> tuple:
-        range_ = convert_coord((1, 1)) + ':' + convert_coord((count+1, 1))
+            request = self.service.spreadsheets().get(spreadsheetId=link, 
+                                                    ranges=range_colors, 
+                                                    fields='sheets.data.rowData.values.effectiveFormat.backgroundColor', 
+                                                    includeGridData=True).execute()
+            color = {}
+            i = 0
+            for item in coord:
+                color[item] = {'queue': [], 'having': []}
+                item_cells = request['sheets'][0]['data'][i]['rowData']
+                for row in range(len(item_cells)):
+                    color[item]['queue'].append(item_cells[row]['values'][0]['effectiveFormat']['backgroundColor'])
+                    color[item]['having'].append(item_cells[row]['values'][1]['effectiveFormat']['backgroundColor'])
+                i += 1
+            
+        range_ = convert_coord((1, 1)) + ':' + convert_coord((classes_count+1, 1))
         request = self.service.spreadsheets().get(spreadsheetId=link, ranges=f'{SHEET}!{range_}', includeGridData=True).execute()
-        classes_colour = [request['sheets'][0]['data'][0]['rowData'][0]['values'][count]['effectiveFormat']['backgroundColorStyle']['rgbColor']]
-        for i in range(count):
-            classes_colour.append(request['sheets'][0]['data'][0]['rowData'][0]['values'][i]['effectiveFormat']['backgroundColorStyle']['rgbColor'])
-        return classes_colour
+        classes_color = [request['sheets'][0]['data'][0]['rowData'][0]['values'][classes_count]['effectiveFormat']['backgroundColorStyle']['rgbColor']]
+        for i in range(classes_count):
+            classes_color.append(request['sheets'][0]['data'][0]['rowData'][0]['values'][i]['effectiveFormat']['backgroundColorStyle']['rgbColor'])
 
+        return loot_que, coord, color, classes_color
+
+
+
+    def writing_to_the_sheet(self, link: str, data: dict, data_color: dict, 
+                             orient: str, ranges: int) -> bool:
+        if orient == '|':
+            requests = []
+            for key in ranges:
+                cell_range = key
+                start_row = ranges[key][0][1] - 1
+                start_col = ranges[key][0][0] - 1
+                end_row = ranges[key][1][1] - 1
+                end_col = ranges[key][1][0] - 1
+
+                if key in data:
+                    for cell_num in range(start_row, end_row + 1):
+                        cell_text_queue = data[key].get("queue", [])[cell_num - start_row]
+                        cell_text_having = data[key].get("having", [])[cell_num - start_row]
+
+                        request = {
+                            'repeatCell': {
+                                'range': {
+                                    'sheetId': 0,
+                                    'startRowIndex': cell_num,
+                                    'endRowIndex': cell_num + 1,
+                                    'startColumnIndex': start_col,
+                                    'endColumnIndex': end_col
+                                },
+                                'cell': {
+                                    'userEnteredValue': {
+                                        'stringValue': cell_text_queue
+                                    }
+                                },
+                                'fields': 'userEnteredValue'
+                            }
+                        }
+                        requests.append(request)
+
+                        
+                        request = {
+                            'repeatCell': {
+                                'range': {
+                                    'sheetId': 0,
+                                    'startRowIndex': cell_num,
+                                    'endRowIndex': cell_num + 1,
+                                    'startColumnIndex': start_col + 1,
+                                    'endColumnIndex': end_col + 1
+                                },
+                                'cell': {
+                                    'userEnteredValue': {
+                                        'stringValue': cell_text_having
+                                    }
+                                },
+                                'fields': 'userEnteredValue'
+                            }
+                        }
+                        requests.append(request)
+                
+                        
+                if key in data_color:
+                    for cell_num in range(start_row, end_row + 1):
+                        cell_color_queue = data_color[key].get("queue", [])[cell_num - start_row]
+                        cell_color_having = data_color[key].get("having", [])[cell_num - start_row]
+
+                        request = {
+                            'repeatCell': {
+                                'range': {
+                                    'sheetId': 0,
+                                    'startRowIndex': cell_num,
+                                    'endRowIndex': cell_num + 1,
+                                    'startColumnIndex': start_col,
+                                    'endColumnIndex': end_col
+                                },
+                                'cell': {
+                                    'userEnteredFormat': {
+                                        'backgroundColor': cell_color_queue
+                                    }
+                                },
+                                'fields': 'userEnteredFormat.backgroundColor'
+                            }
+                        }
+                        requests.append(request)
+
+                        request = {
+                            'repeatCell': {
+                                'range': {
+                                    'sheetId': 0,
+                                    'startRowIndex': cell_num,
+                                    'endRowIndex': cell_num + 1,
+                                    'startColumnIndex': start_col + 1,
+                                    'endColumnIndex': end_col + 1
+                                },
+                                'cell': {
+                                    'userEnteredFormat': {
+                                        'backgroundColor': cell_color_having
+                                    }
+                                },
+                                'fields': 'userEnteredFormat.backgroundColor'
+                            }
+                        }
+                        requests.append(request)
+
+            batch_update_request = self.service.spreadsheets().batchUpdate(spreadsheetId=link, body={'requests': requests})
+            try:
+                response = batch_update_request.execute()
+                logger.debug(f'{P} writing to the sheet (sucess) - {link}')
+                return True
+            except HttpError as e:
+                logger.critical(f'{P} ERROR writing to the sheet - {link}: \n{e}')
+                return False
 
     
     

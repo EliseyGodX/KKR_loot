@@ -1,5 +1,5 @@
 import discord
-from loguru import logger
+from logger import logger
 import DB
 from discordModules import *
 import API
